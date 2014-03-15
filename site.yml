@@ -1,15 +1,15 @@
-title: Addicted to R
-tagline: "academic/hacker"
+title: Nathan Wells
+tagline: "Stats and Stocks"
 theme: "09"
 reverse: False
 description: >
-  I am a professor of operations management, addicted to R and data visualization.
+  I am a statistician and i like to trade stocks.
 
-url: "http://ramnathv.github.io/"
+url: "http://ngwells.github.io/"
 author:
-  name: "Ramnath Vaidyanathan"
-  github: "ramnathv"
-  twitter: "ramnath_vaidya"
+  name: "Nathan Wells"
+  github: "ngwells"
+
 
 sidebar:
   - {item: Research, href: '/research', icon: 'cogs'}
