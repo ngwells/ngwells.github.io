@@ -1,0 +1,21 @@
+---
+title       : Add DeckJS Extension
+author      : Nathan Wells
+framework   : deckjs
+mode        : selfcontained
+github:
+	user: ngwells
+	repo: TheCommishsCup.github.io
+---
+
+## Results of Day 1
+```{r, echo=F, results='asis'}
+print(xtable(X[,2:13],align="ccccccccccccc",size = "small"), type = "html")
+```
+---
+---
+
+## You don't have to go home,
+But you can't stay here!
+
+
