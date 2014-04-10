@@ -128,7 +128,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>testing site</title>
+<title>testing site\n</title>
 
 
 
@@ -273,7 +273,9 @@ hr {
 </head>
 
 <body>
-<h2>testing site</h2>
+<h2>testing site\n</h2>
+
+<p>test\n</p>
 
 <p><link rel='stylesheet' href=http://cdn.strategiqcommerce.com/ajax/libs/rickshaw/1.2.1/rickshaw.min.css>
 <link rel='stylesheet' href=http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css></p>
@@ -284,15 +286,45 @@ hr {
 
 <script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js></script>
 
-<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js></script>
-
+<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js></script><link rel='stylesheet' href=http://cdn.strategiqcommerce.com/ajax/libs/rickshaw/1.2.1/rickshaw.min.css>
+<link rel='stylesheet' href=http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css>
+<script type='text/javascript' src=http://d3js.org/d3.v2.min.js></script>
+<script type='text/javascript' src=http://cdn.strategiqcommerce.com/ajax/libs/rickshaw/1.2.1/rickshaw.min.js></script>
+<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js></script>
+<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js></script> 
+    <style>
+    .chart_container {
+        position: relative;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .rChart {
+        display: inline-block;
+        margin-left: 40px;
+    }
+   .yAxis {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+   }
+   .legend {
+        position: absolute;
+        top: 0;
+        right: -160px;
+        vertical-align: top;
+    }
+    .slider {
+      margin-left: 40px;
+      margin-top: 12px;
+    }
+    </style>
 <div class='chart_container'>
   <div id='yAxisTestChart' class='yAxis'></div>
   <div id='TestChart' class='rChart rickshaw'></div>
   <div id='legendTestChart' class='legend'></div>
   <div id='sliderTestChart' class='slider'></div>
 </div>
-
 <script type='text/javascript'> 
   var palette = new Rickshaw.Color.Palette({ scheme: "colorwheel" });
   var chartParams = {
@@ -558,7 +590,7 @@ hr {
 "color":  palette.color()  
 } 
 ],
-"renderer": "area",
+"renderer": "stack",
 "id": "TestChart" 
 }
   chartParams.element = document.querySelector('#TestChart')
@@ -604,6 +636,7 @@ var sliderTestChart = new Rickshaw.Graph.RangeSlider({
 </body>
 
 </html>
+
 
 
 
