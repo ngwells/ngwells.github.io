@@ -122,46 +122,353 @@
       </h3>
       <span class="post-date">2014-03-17</span>    
  
+      First Post
       
       
-      
-  <div id = 'polyScatter' class = 'rChart polycharts'></div>
+  <body>
+<h2>testing site</h2>
 
-<script type='text/javascript'>
-    var chartParams = {
- "dom": "polyScatter",
-"width":    800,
-"height":    400,
-"layers": [
+<p>The chunk below shows how to produce a simple scatter plot using Polychart library.</p>
+
+<pre><code class="r">return &lt;- read.csv(&quot;C:/Users/Brian/Dropbox/Nathan (1)/Caine Investment Fund/pitch book latex/returnsformatted.csv&quot;, 
+    h = T)
+return$var2 &lt;- as.numeric(as.POSIXct(paste0(return$var2, &quot;-01-01&quot;)))
+p4 &lt;- Rickshaw$new()
+p4$layer(var3 ~ var2, group = &quot;var1&quot;, data = return, type = &quot;stack&quot;, width = 560)
+# add a helpful slider this easily; other features TRUE as a default
+p4$set(slider = TRUE)
+p4$print(&quot;chart6&quot;)
+</code></pre>
+
+<div class='chart_container'>
+  <div id='yAxischart6' class='yAxis'></div>
+  <div id='chart6' class='rChart rickshaw'></div>
+  <div id='legendchart6' class='legend'></div>
+  <div id='sliderchart6' class='slider'></div>
+</div>
+
+<script type='text/javascript'> 
+  var palette = new Rickshaw.Color.Palette({ scheme: "colorwheel" });
+  var chartParams = {
+ "dom": "chart6",
+"width":            560,
+"height":            400,
+"scheme": "colorwheel",
+"series": [
  {
- "x": "SepalWidth",
-"y": "SepalLength",
-"data": {
- "SepalLength": [    5.1,    4.9,    4.7,    4.6,      5,    5.4,    4.6,      5,    4.4,    4.9,    5.4,    4.8,    4.8,    4.3,    5.8,    5.7,    5.4,    5.1,    5.7,    5.1,    5.4,    5.1,    4.6,    5.1,    4.8,      5,      5,    5.2,    5.2,    4.7,    4.8,    5.4,    5.2,    5.5,    4.9,      5,    5.5,    4.9,    4.4,    5.1,      5,    4.5,    4.4,      5,    5.1,    4.8,    5.1,    4.6,    5.3,      5,      7,    6.4,    6.9,    5.5,    6.5,    5.7,    6.3,    4.9,    6.6,    5.2,      5,    5.9,      6,    6.1,    5.6,    6.7,    5.6,    5.8,    6.2,    5.6,    5.9,    6.1,    6.3,    6.1,    6.4,    6.6,    6.8,    6.7,      6,    5.7,    5.5,    5.5,    5.8,      6,    5.4,      6,    6.7,    6.3,    5.6,    5.5,    5.5,    6.1,    5.8,      5,    5.6,    5.7,    5.7,    6.2,    5.1,    5.7,    6.3,    5.8,    7.1,    6.3,    6.5,    7.6,    4.9,    7.3,    6.7,    7.2,    6.5,    6.4,    6.8,    5.7,    5.8,    6.4,    6.5,    7.7,    7.7,      6,    6.9,    5.6,    7.7,    6.3,    6.7,    7.2,    6.2,    6.1,    6.4,    7.2,    7.4,    7.9,    6.4,    6.3,    6.1,    7.7,    6.3,    6.4,      6,    6.9,    6.7,    6.9,    5.8,    6.8,    6.7,    6.7,    6.3,    6.5,    6.2,    5.9 ],
-"SepalWidth": [    3.5,      3,    3.2,    3.1,    3.6,    3.9,    3.4,    3.4,    2.9,    3.1,    3.7,    3.4,      3,      3,      4,    4.4,    3.9,    3.5,    3.8,    3.8,    3.4,    3.7,    3.6,    3.3,    3.4,      3,    3.4,    3.5,    3.4,    3.2,    3.1,    3.4,    4.1,    4.2,    3.1,    3.2,    3.5,    3.6,      3,    3.4,    3.5,    2.3,    3.2,    3.5,    3.8,      3,    3.8,    3.2,    3.7,    3.3,    3.2,    3.2,    3.1,    2.3,    2.8,    2.8,    3.3,    2.4,    2.9,    2.7,      2,      3,    2.2,    2.9,    2.9,    3.1,      3,    2.7,    2.2,    2.5,    3.2,    2.8,    2.5,    2.8,    2.9,      3,    2.8,      3,    2.9,    2.6,    2.4,    2.4,    2.7,    2.7,      3,    3.4,    3.1,    2.3,      3,    2.5,    2.6,      3,    2.6,    2.3,    2.7,      3,    2.9,    2.9,    2.5,    2.8,    3.3,    2.7,      3,    2.9,      3,      3,    2.5,    2.9,    2.5,    3.6,    3.2,    2.7,      3,    2.5,    2.8,    3.2,      3,    3.8,    2.6,    2.2,    3.2,    2.8,    2.8,    2.7,    3.3,    3.2,    2.8,      3,    2.8,      3,    2.8,    3.8,    2.8,    2.8,    2.6,      3,    3.4,    3.1,      3,    3.1,    3.1,    3.1,    2.7,    3.2,    3.3,      3,    2.5,      3,    3.4,      3 ],
-"PetalLength": [    1.4,    1.4,    1.3,    1.5,    1.4,    1.7,    1.4,    1.5,    1.4,    1.5,    1.5,    1.6,    1.4,    1.1,    1.2,    1.5,    1.3,    1.4,    1.7,    1.5,    1.7,    1.5,      1,    1.7,    1.9,    1.6,    1.6,    1.5,    1.4,    1.6,    1.6,    1.5,    1.5,    1.4,    1.5,    1.2,    1.3,    1.4,    1.3,    1.5,    1.3,    1.3,    1.3,    1.6,    1.9,    1.4,    1.6,    1.4,    1.5,    1.4,    4.7,    4.5,    4.9,      4,    4.6,    4.5,    4.7,    3.3,    4.6,    3.9,    3.5,    4.2,      4,    4.7,    3.6,    4.4,    4.5,    4.1,    4.5,    3.9,    4.8,      4,    4.9,    4.7,    4.3,    4.4,    4.8,      5,    4.5,    3.5,    3.8,    3.7,    3.9,    5.1,    4.5,    4.5,    4.7,    4.4,    4.1,      4,    4.4,    4.6,      4,    3.3,    4.2,    4.2,    4.2,    4.3,      3,    4.1,      6,    5.1,    5.9,    5.6,    5.8,    6.6,    4.5,    6.3,    5.8,    6.1,    5.1,    5.3,    5.5,      5,    5.1,    5.3,    5.5,    6.7,    6.9,      5,    5.7,    4.9,    6.7,    4.9,    5.7,      6,    4.8,    4.9,    5.6,    5.8,    6.1,    6.4,    5.6,    5.1,    5.6,    6.1,    5.6,    5.5,    4.8,    5.4,    5.6,    5.1,    5.1,    5.9,    5.7,    5.2,      5,    5.2,    5.4,    5.1 ],
-"PetalWidth": [    0.2,    0.2,    0.2,    0.2,    0.2,    0.4,    0.3,    0.2,    0.2,    0.1,    0.2,    0.2,    0.1,    0.1,    0.2,    0.4,    0.4,    0.3,    0.3,    0.3,    0.2,    0.4,    0.2,    0.5,    0.2,    0.2,    0.4,    0.2,    0.2,    0.2,    0.2,    0.4,    0.1,    0.2,    0.2,    0.2,    0.2,    0.1,    0.2,    0.2,    0.3,    0.3,    0.2,    0.6,    0.4,    0.3,    0.2,    0.2,    0.2,    0.2,    1.4,    1.5,    1.5,    1.3,    1.5,    1.3,    1.6,      1,    1.3,    1.4,      1,    1.5,      1,    1.4,    1.3,    1.4,    1.5,      1,    1.5,    1.1,    1.8,    1.3,    1.5,    1.2,    1.3,    1.4,    1.4,    1.7,    1.5,      1,    1.1,      1,    1.2,    1.6,    1.5,    1.6,    1.5,    1.3,    1.3,    1.3,    1.2,    1.4,    1.2,      1,    1.3,    1.2,    1.3,    1.3,    1.1,    1.3,    2.5,    1.9,    2.1,    1.8,    2.2,    2.1,    1.7,    1.8,    1.8,    2.5,      2,    1.9,    2.1,      2,    2.4,    2.3,    1.8,    2.2,    2.3,    1.5,    2.3,      2,      2,    1.8,    2.1,    1.8,    1.8,    1.8,    2.1,    1.6,    1.9,      2,    2.2,    1.5,    1.4,    2.3,    2.4,    1.8,    1.8,    2.1,    2.4,    2.3,    1.9,    2.3,    2.5,    2.3,    1.9,      2,    2.3,    1.8 ],
-"Species": [ "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica" ] 
+ "data": [
+ {
+ "x":      915177600,
+"y":          55.63 
 },
-"facet": "Species",
-"color": "Species",
-"type": "point" 
+{
+ "x":      946713600,
+"y":          41.47 
+},
+{
+ "x":      978336000,
+"y":          24.65 
+},
+{
+ "x":     1009872000,
+"y":           -2.9 
+},
+{
+ "x":     1041408000,
+"y":          24.96 
+},
+{
+ "x":     1072944000,
+"y":          38.56 
+},
+{
+ "x":     1104566400,
+"y":          45.36 
+},
+{
+ "x":     1136102400,
+"y":          68.31 
+},
+{
+ "x":     1167638400,
+"y":          77.55 
+},
+{
+ "x":     1199174400,
+"y":          11.86 
+},
+{
+ "x":     1230796800,
+"y":          41.46 
+},
+{
+ "x":     1262332800,
+"y":          62.76 
+},
+{
+ "x":     1293868800,
+"y":          66.18 
+},
+{
+ "x":     1325404800,
+"y":          92.76 
+},
+{
+ "x":     1357027200,
+"y":          155.2 
 } 
 ],
-"facet": {
- "type": "wrap",
-"var": "Species" 
+"name": "aSP500",
+"info": {
+ "915177600": {
+ "var1": "aSP500",
+"var2":      915177600 
 },
-"guides": [],
-"coord": [],
-"id": "polyScatter" 
+"946713600": {
+ "var1": "aSP500",
+"var2":      946713600 
+},
+"978336000": {
+ "var1": "aSP500",
+"var2":      978336000 
+},
+"1009872000": {
+ "var1": "aSP500",
+"var2":     1009872000 
+},
+"1041408000": {
+ "var1": "aSP500",
+"var2":     1041408000 
+},
+"1072944000": {
+ "var1": "aSP500",
+"var2":     1072944000 
+},
+"1104566400": {
+ "var1": "aSP500",
+"var2":     1104566400 
+},
+"1136102400": {
+ "var1": "aSP500",
+"var2":     1136102400 
+},
+"1167638400": {
+ "var1": "aSP500",
+"var2":     1167638400 
+},
+"1199174400": {
+ "var1": "aSP500",
+"var2":     1199174400 
+},
+"1230796800": {
+ "var1": "aSP500",
+"var2":     1230796800 
+},
+"1262332800": {
+ "var1": "aSP500",
+"var2":     1262332800 
+},
+"1293868800": {
+ "var1": "aSP500",
+"var2":     1293868800 
+},
+"1325404800": {
+ "var1": "aSP500",
+"var2":     1325404800 
+},
+"1357027200": {
+ "var1": "aSP500",
+"var2":     1357027200 
+} 
+},
+"color":  palette.color()  
+},
+{
+ "data": [
+ {
+ "x":      915177600,
+"y":          64.33 
+},
+{
+ "x":      946713600,
+"y":         137.27 
+},
+{
+ "x":      978336000,
+"y":         182.89 
+},
+{
+ "x":     1009872000,
+"y":         166.29 
+},
+{
+ "x":     1041408000,
+"y":         223.49 
+},
+{
+ "x":     1072944000,
+"y":         230.83 
+},
+{
+ "x":     1104566400,
+"y":         254.71 
+},
+{
+ "x":     1136102400,
+"y":         305.97 
+},
+{
+ "x":     1167638400,
+"y":          272.6 
+},
+{
+ "x":     1199174400,
+"y":         103.89 
+},
+{
+ "x":     1230796800,
+"y":         177.18 
+},
+{
+ "x":     1262332800,
+"y":         244.62 
+},
+{
+ "x":     1293868800,
+"y":         246.93 
+},
+{
+ "x":     1325404800,
+"y":         260.36 
+},
+{
+ "x":     1357027200,
+"y":         317.11 
+} 
+],
+"name": "Caine Fund",
+"info": {
+ "915177600": {
+ "var1": "Caine Fund",
+"var2":      915177600 
+},
+"946713600": {
+ "var1": "Caine Fund",
+"var2":      946713600 
+},
+"978336000": {
+ "var1": "Caine Fund",
+"var2":      978336000 
+},
+"1009872000": {
+ "var1": "Caine Fund",
+"var2":     1009872000 
+},
+"1041408000": {
+ "var1": "Caine Fund",
+"var2":     1041408000 
+},
+"1072944000": {
+ "var1": "Caine Fund",
+"var2":     1072944000 
+},
+"1104566400": {
+ "var1": "Caine Fund",
+"var2":     1104566400 
+},
+"1136102400": {
+ "var1": "Caine Fund",
+"var2":     1136102400 
+},
+"1167638400": {
+ "var1": "Caine Fund",
+"var2":     1167638400 
+},
+"1199174400": {
+ "var1": "Caine Fund",
+"var2":     1199174400 
+},
+"1230796800": {
+ "var1": "Caine Fund",
+"var2":     1230796800 
+},
+"1262332800": {
+ "var1": "Caine Fund",
+"var2":     1262332800 
+},
+"1293868800": {
+ "var1": "Caine Fund",
+"var2":     1293868800 
+},
+"1325404800": {
+ "var1": "Caine Fund",
+"var2":     1325404800 
+},
+"1357027200": {
+ "var1": "Caine Fund",
+"var2":     1357027200 
+} 
+},
+"color":  palette.color()  
+} 
+],
+"renderer": "stack",
+"id": "chart6" 
 }
-    _.each(chartParams.layers, function(el){
-        el.data = polyjs.data(el.data)
-    })
-    var graph_polyScatter = polyjs.chart(chartParams);
-</script>
+  chartParams.element = document.querySelector('#chart6')
+  
+  var graphchart6 = new Rickshaw.Graph(chartParams);
+  
+  graphchart6.render();
+  
+  var xAxischart6 = new Rickshaw.Graph.Axis.Time({
+ "graph":  graphchart6  
+})
+var yAxischart6 = new Rickshaw.Graph.Axis.Y({
+ "graph":  graphchart6 ,
+"orientation": "left",
+"element":  document.getElementById('yAxischart6') ,
+"tickFormat":  Rickshaw.Fixtures.Number.formatKMBT  
+})
+graphchart6.render()
+var legendchart6 = new Rickshaw.Graph.Legend({
+ "graph":  graphchart6 ,
+"element":  document.getElementById('legendchart6')  
+})
+var shelvingchart6 = new Rickshaw.Graph.Behavior.Series.Toggle({
+ "graph":  graphchart6 ,
+"legend":  legendchart6  
+})
+var hoverDetailchart6 = new Rickshaw.Graph.HoverDetail({
+ "graph":  graphchart6  
+})
+var highlightchart6 = new Rickshaw.Graph.Behavior.Series.Highlight({
+ "graph":  graphchart6 ,
+"legend":  legendchart6  
+})
+var sliderchart6 = new Rickshaw.Graph.RangeSlider({
+ "graph":  graphchart6 ,
+"element":  document.getElementById('sliderchart6')  
+})
+  
+  graphchart6.render();
+  
+</script> 
 
+<pre><code class="r">p4
+</code></pre>
+
+<iframe src='
+figure/unnamed-chunk-1.html
+' scrolling='no' seamless
+class='rChart rickshaw '
+id=iframe-
+chart6
+></iframe>
+
+<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+
+</body>
 
     </div>
     
