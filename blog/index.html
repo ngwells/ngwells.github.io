@@ -123,62 +123,181 @@
       <span class="post-date">2014-03-17</span>    
  
       First Post
-<!DOCTYPE HTML>
-<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
-http-equiv="X-UA-Compatible">
-     
-<META http-equiv="Content-Type" content="text/html; charset=windows-1252"><LINK 
-href="testtest_files/rickshaw.min.css" rel="stylesheet">     <LINK href="testtest_files/jquery-ui.css" 
-rel="stylesheet">         
-<SCRIPT src="testtest_files/d3.v2.min.js" type="text/javascript"></SCRIPT>
-     
-<SCRIPT src="testtest_files/rickshaw.min.js" type="text/javascript"></SCRIPT>
-     
-<SCRIPT src="testtest_files/jquery.min.js" type="text/javascript"></SCRIPT>
-     
-<SCRIPT src="testtest_files/jquery-ui.min.js" type="text/javascript"></SCRIPT>
-         
-<STYLE>
-    .chart_container {
-        position: relative;
-        display: inline-block;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .rChart {
-        display: inline-block;
-        margin-left: 40px;
-    }
-   .yAxis {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 40px;
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>testing site</title>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
    }
-   .legend {
-        position: absolute;
-        top: 0;
-        right: -160px;
-        vertical-align: top;
-    }
-    .slider {
-      margin-left: 40px;
-      margin-top: 12px;
-    }
-    </STYLE>
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
        
-<META name="GENERATOR" content="MSHTML 11.00.9600.16659"></HEAD>   
-<BODY>
-<DIV class="chart_container">
-<DIV class="yAxis" id="yAxischart6"></DIV>
-<DIV class="rChart rickshaw" id="chart6"></DIV>
-<DIV class="xAxis" id="xAxischart6"></DIV>
-<DIV class="legend" id="legendchart6"></DIV>
-<DIV class="slider" id="sliderchart6"></DIV></DIV>
-<SCRIPT type="text/javascript"> 
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h2>testing site</h2>
+
+<p><link rel='stylesheet' href=http://cdn.strategiqcommerce.com/ajax/libs/rickshaw/1.2.1/rickshaw.min.css>
+<link rel='stylesheet' href=http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css></p>
+
+<script type='text/javascript' src=http://d3js.org/d3.v2.min.js></script>
+
+<script type='text/javascript' src=http://cdn.strategiqcommerce.com/ajax/libs/rickshaw/1.2.1/rickshaw.min.js></script>
+
+<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js></script>
+
+<script type='text/javascript' src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js></script>
+
+<div class='chart_container'>
+  <div id='yAxisTestChart' class='yAxis'></div>
+  <div id='TestChart' class='rChart rickshaw'></div>
+  <div id='legendTestChart' class='legend'></div>
+  <div id='sliderTestChart' class='slider'></div>
+</div>
+
+<script type='text/javascript'> 
   var palette = new Rickshaw.Color.Palette({ scheme: "colorwheel" });
   var chartParams = {
- "dom": "chart6",
-"width":            560,
+ "dom": "TestChart",
+"width":            700,
 "height":            400,
 "scheme": "colorwheel",
 "series": [
@@ -314,63 +433,63 @@ rel="stylesheet">
  "data": [
  {
  "x":      915177600,
-"y":          64.33 
+"y":            8.7 
 },
 {
  "x":      946713600,
-"y":         137.27 
+"y":           95.8 
 },
 {
  "x":      978336000,
-"y":         182.89 
+"y":         158.24 
 },
 {
  "x":     1009872000,
-"y":         166.29 
+"y":         169.19 
 },
 {
  "x":     1041408000,
-"y":         223.49 
+"y":         198.53 
 },
 {
  "x":     1072944000,
-"y":         230.83 
+"y":         192.27 
 },
 {
  "x":     1104566400,
-"y":         254.71 
+"y":         209.35 
 },
 {
  "x":     1136102400,
-"y":         305.97 
+"y":         237.66 
 },
 {
  "x":     1167638400,
-"y":          272.6 
+"y":         195.05 
 },
 {
  "x":     1199174400,
-"y":         103.89 
+"y":          92.03 
 },
 {
  "x":     1230796800,
-"y":         177.18 
+"y":         135.72 
 },
 {
  "x":     1262332800,
-"y":         244.62 
+"y":         181.86 
 },
 {
  "x":     1293868800,
-"y":         246.93 
+"y":         180.75 
 },
 {
  "x":     1325404800,
-"y":         260.36 
+"y":          167.6 
 },
 {
  "x":     1357027200,
-"y":         317.11 
+"y":         161.91 
 } 
 ],
 "name": "Caine Fund",
@@ -440,48 +559,52 @@ rel="stylesheet">
 } 
 ],
 "renderer": "area",
-"id": "chart6" 
+"id": "TestChart" 
 }
-  chartParams.element = document.querySelector('#chart6')
+  chartParams.element = document.querySelector('#TestChart')
   
-  var graphchart6 = new Rickshaw.Graph(chartParams);
+  var graphTestChart = new Rickshaw.Graph(chartParams);
   
-  graphchart6.render();
+  graphTestChart.render();
   
-  var xAxischart6 = new Rickshaw.Graph.Axis.Time({
- "graph":  graphchart6  
+  var xAxisTestChart = new Rickshaw.Graph.Axis.Time({
+ "graph":  graphTestChart  
 })
-var yAxischart6 = new Rickshaw.Graph.Axis.Y({
- "graph":  graphchart6 ,
+var yAxisTestChart = new Rickshaw.Graph.Axis.Y({
+ "graph":  graphTestChart ,
 "orientation": "left",
-"element":  document.getElementById('yAxischart6') ,
+"element":  document.getElementById('yAxisTestChart') ,
 "tickFormat":  Rickshaw.Fixtures.Number.formatKMBT  
 })
-graphchart6.render()
-var legendchart6 = new Rickshaw.Graph.Legend({
- "graph":  graphchart6 ,
-"element":  document.getElementById('legendchart6')  
+graphTestChart.render()
+var legendTestChart = new Rickshaw.Graph.Legend({
+ "graph":  graphTestChart ,
+"element":  document.getElementById('legendTestChart')  
 })
-var shelvingchart6 = new Rickshaw.Graph.Behavior.Series.Toggle({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
+var shelvingTestChart = new Rickshaw.Graph.Behavior.Series.Toggle({
+ "graph":  graphTestChart ,
+"legend":  legendTestChart  
 })
-var hoverDetailchart6 = new Rickshaw.Graph.HoverDetail({
- "graph":  graphchart6  
+var hoverDetailTestChart = new Rickshaw.Graph.HoverDetail({
+ "graph":  graphTestChart  
 })
-var highlightchart6 = new Rickshaw.Graph.Behavior.Series.Highlight({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
+var highlightTestChart = new Rickshaw.Graph.Behavior.Series.Highlight({
+ "graph":  graphTestChart ,
+"legend":  legendTestChart  
 })
-var sliderchart6 = new Rickshaw.Graph.RangeSlider({
- "graph":  graphchart6 ,
-"element":  document.getElementById('sliderchart6')  
+var sliderTestChart = new Rickshaw.Graph.RangeSlider({
+ "graph":  graphTestChart ,
+"element":  document.getElementById('sliderTestChart')  
 })
   
-  graphchart6.render();
+  graphTestChart.render();
   
-</SCRIPT>
-       </BODY></HTML>
+</script> 
+
+</body>
+
+</html>
+
 
 
 
