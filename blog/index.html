@@ -124,122 +124,86 @@
  
       First Post
  <!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>testing site</title>
 
-<!-- Styles for R syntax highlighter -->
-<style type="text/css">
-   pre .operator,
-   pre .paren {
-     color: rgb(104, 118, 135)
-   }
-
-   pre .literal {
-     color: #990073
-   }
-
-   pre .number {
-     color: #099;
-   }
-
-   pre .comment {
-     color: #998;
-     font-style: italic
-   }
-
-   pre .keyword {
-     color: #900;
-     font-weight: bold
-   }
-
-   pre .identifier {
-     color: rgb(0, 0, 0);
-   }
-
-   pre .string {
-     color: #d14;
-   }
-</style>
-
-<!-- R syntax highlighter -->
-<script type="text/javascript">
-var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
-hljs.initHighlightingOnLoad();
-</script>
-
-<!-- MathJax scripts -->
-<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<title>Markdown example with knitr and rCharts</title>
 
 
 <style type="text/css">
 body, td {
    font-family: sans-serif;
    background-color: white;
-   font-size: 13px;
+   font-size: 12px;
+   margin: 8px;
 }
 
-body {
-  max-width: 800px;
-  margin: auto;
-  line-height: 20px;
-}
 
 tt, code, pre {
    font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
 }
 
+
 h1 { 
    font-size:2.2em; 
 }
+
 
 h2 { 
    font-size:1.8em; 
 }
 
+
 h3 { 
    font-size:1.4em; 
 }
+
 
 h4 { 
    font-size:1.0em; 
 }
 
+
 h5 { 
    font-size:0.9em; 
 }
+
 
 h6 { 
    font-size:0.8em; 
 }
 
+
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre, img {
-  max-width: 100%;
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
 }
+
 
 pre code {
    display: block; padding: 0.5em;
 }
 
-code {
-  font-size: 92%;
-  border: 1px solid #ccc;
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
 }
 
-code[class] {
-  background-color: #F8F8F8;
-}
 
 table, td, th {
   border: none;
 }
+
 
 blockquote {
    color:#666666;
@@ -247,6 +211,7 @@ blockquote {
    padding-left: 1em;
    border-left: 0.5em #EEE solid;
 }
+
 
 hr {
    height: 0px;
@@ -256,6 +221,7 @@ hr {
    border-top-color: #999999;
 }
 
+
 @media print {
    * { 
       background: transparent !important; 
@@ -263,6 +229,7 @@ hr {
       filter:none !important; 
       -ms-filter: none !important; 
    }
+
 
    body { 
       font-size:12pt; 
@@ -273,23 +240,28 @@ hr {
       text-decoration: underline; 
    }
 
+
    hr { 
       visibility: hidden;
       page-break-before: always;
    }
+
 
    pre, blockquote { 
       padding-right: 1em; 
       page-break-inside: avoid; 
    }
 
+
    tr, img { 
       page-break-inside: avoid; 
    }
 
+
    img { 
       max-width: 100% !important; 
    }
+
 
    @page :left { 
       margin: 15mm 20mm 15mm 10mm; 
@@ -299,364 +271,1547 @@ hr {
       margin: 15mm 10mm 15mm 20mm; 
    }
 
+
    p, h2, h3 { 
       orphans: 3; widows: 3; 
    }
+
 
    h2, h3 { 
       page-break-after: avoid; 
    }
 }
+
+
 </style>
+
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
 
 
 
 </head>
 
+
 <body>
-<h2>testing site</h2>
+<h1>Markdown example with knitr and rCharts</h1>
 
-<p>The chunk below shows how to produce a simple scatter plot using Polychart library.</p>
 
-<pre><code class="r">return &lt;- read.csv(&quot;C:/Users/Brian/Dropbox/Nathan (1)/Caine Investment Fund/pitch book latex/returnsformatted.csv&quot;, 
-    h = T)
-return$var2 &lt;- as.numeric(as.POSIXct(paste0(return$var2, &quot;-01-01&quot;)))
-p4 &lt;- Rickshaw$new()
-p4$layer(var3 ~ var2, group = &quot;var1&quot;, data = return, type = &quot;stack&quot;, width = 560)
-# add a helpful slider this easily; other features TRUE as a default
-p4$set(slider = TRUE)
-p4$print(&quot;chart6&quot;)
+<h1></h1>
+
+
+<p>This is an example file showing how to use rCharts with knitr/markdown. <strong>rCharts</strong> an R package to create, customize and publish interactive javascript visualizations from R.</p>
+
+
+<p>Let&#39;s first install it, it lives on github, not on CRAN yet.</p>
+
+
+<pre><code class="r">require(devtools)
+install_github(&quot;rCharts&quot;, &quot;ramnathv&quot;, ref = &quot;dev&quot;)
 </code></pre>
 
-<div class='chart_container'>
-  <div id='yAxischart6' class='yAxis'></div>
-  <div id='chart6' class='rChart rickshaw'></div>
-  <div id='legendchart6' class='legend'></div>
-  <div id='sliderchart6' class='slider'></div>
-</div>
 
-<script type='text/javascript'> 
-  var palette = new Rickshaw.Color.Palette({ scheme: "colorwheel" });
-  var chartParams = {
- "dom": "chart6",
-"width":            560,
-"height":            400,
-"scheme": "colorwheel",
-"series": [
+<h2>Scatter plot using Polycharts</h2>
+
+
+<pre><code class="r">require(rCharts)
+</code></pre>
+
+
+<pre><code>## Loading required package: rCharts
+</code></pre>
+
+
+<pre><code class="r">
+names(iris) = gsub(&quot;\\.&quot;, &quot;&quot;, names(iris))
+add_lib_assets(&quot;Polycharts&quot;, cdn = TRUE)
+</code></pre>
+
+
+<p>[1] &ldquo;<script type='text/javascript' src=https://rawgithub.com/Polychart/polychart2/develop/polychart2.standalone.js></script>&rdquo;</p>
+
+
+<pre><code class="r">r1 &lt;- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = &quot;Species&quot;, 
+    type = &quot;point&quot;)
+r1$print(&quot;polyScatter&quot;)
+</code></pre>
+
+
+<div id = 'polyScatter' class = 'rChart polycharts'></div>
+
+
+<script type='text/javascript'>
+    var chartParams = {
+ "dom": "polyScatter",
+"width":    800,
+"height":    400,
+"layers": [
  {
- "data": [
- {
- "x":      915177600,
-"y":          55.63 
+ "x": "SepalWidth",
+"y": "SepalLength",
+"data": {
+ "SepalLength": [    5.1,    4.9,    4.7,    4.6,      5,    5.4,    4.6,      5,    4.4,    4.9,    5.4,    4.8,    4.8,    4.3,    5.8,    5.7,    5.4,    5.1,    5.7,    5.1,    5.4,    5.1,    4.6,    5.1,    4.8,      5,      5,    5.2,    5.2,    4.7,    4.8,    5.4,    5.2,    5.5,    4.9,      5,    5.5,    4.9,    4.4,    5.1,      5,    4.5,    4.4,      5,    5.1,    4.8,    5.1,    4.6,    5.3,      5,      7,    6.4,    6.9,    5.5,    6.5,    5.7,    6.3,    4.9,    6.6,    5.2,      5,    5.9,      6,    6.1,    5.6,    6.7,    5.6,    5.8,    6.2,    5.6,    5.9,    6.1,    6.3,    6.1,    6.4,    6.6,    6.8,    6.7,      6,    5.7,    5.5,    5.5,    5.8,      6,    5.4,      6,    6.7,    6.3,    5.6,    5.5,    5.5,    6.1,    5.8,      5,    5.6,    5.7,    5.7,    6.2,    5.1,    5.7,    6.3,    5.8,    7.1,    6.3,    6.5,    7.6,    4.9,    7.3,    6.7,    7.2,    6.5,    6.4,    6.8,    5.7,    5.8,    6.4,    6.5,    7.7,    7.7,      6,    6.9,    5.6,    7.7,    6.3,    6.7,    7.2,    6.2,    6.1,    6.4,    7.2,    7.4,    7.9,    6.4,    6.3,    6.1,    7.7,    6.3,    6.4,      6,    6.9,    6.7,    6.9,    5.8,    6.8,    6.7,    6.7,    6.3,    6.5,    6.2,    5.9 ],
+"SepalWidth": [    3.5,      3,    3.2,    3.1,    3.6,    3.9,    3.4,    3.4,    2.9,    3.1,    3.7,    3.4,      3,      3,      4,    4.4,    3.9,    3.5,    3.8,    3.8,    3.4,    3.7,    3.6,    3.3,    3.4,      3,    3.4,    3.5,    3.4,    3.2,    3.1,    3.4,    4.1,    4.2,    3.1,    3.2,    3.5,    3.6,      3,    3.4,    3.5,    2.3,    3.2,    3.5,    3.8,      3,    3.8,    3.2,    3.7,    3.3,    3.2,    3.2,    3.1,    2.3,    2.8,    2.8,    3.3,    2.4,    2.9,    2.7,      2,      3,    2.2,    2.9,    2.9,    3.1,      3,    2.7,    2.2,    2.5,    3.2,    2.8,    2.5,    2.8,    2.9,      3,    2.8,      3,    2.9,    2.6,    2.4,    2.4,    2.7,    2.7,      3,    3.4,    3.1,    2.3,      3,    2.5,    2.6,      3,    2.6,    2.3,    2.7,      3,    2.9,    2.9,    2.5,    2.8,    3.3,    2.7,      3,    2.9,      3,      3,    2.5,    2.9,    2.5,    3.6,    3.2,    2.7,      3,    2.5,    2.8,    3.2,      3,    3.8,    2.6,    2.2,    3.2,    2.8,    2.8,    2.7,    3.3,    3.2,    2.8,      3,    2.8,      3,    2.8,    3.8,    2.8,    2.8,    2.6,      3,    3.4,    3.1,      3,    3.1,    3.1,    3.1,    2.7,    3.2,    3.3,      3,    2.5,      3,    3.4,      3 ],
+"PetalLength": [    1.4,    1.4,    1.3,    1.5,    1.4,    1.7,    1.4,    1.5,    1.4,    1.5,    1.5,    1.6,    1.4,    1.1,    1.2,    1.5,    1.3,    1.4,    1.7,    1.5,    1.7,    1.5,      1,    1.7,    1.9,    1.6,    1.6,    1.5,    1.4,    1.6,    1.6,    1.5,    1.5,    1.4,    1.5,    1.2,    1.3,    1.4,    1.3,    1.5,    1.3,    1.3,    1.3,    1.6,    1.9,    1.4,    1.6,    1.4,    1.5,    1.4,    4.7,    4.5,    4.9,      4,    4.6,    4.5,    4.7,    3.3,    4.6,    3.9,    3.5,    4.2,      4,    4.7,    3.6,    4.4,    4.5,    4.1,    4.5,    3.9,    4.8,      4,    4.9,    4.7,    4.3,    4.4,    4.8,      5,    4.5,    3.5,    3.8,    3.7,    3.9,    5.1,    4.5,    4.5,    4.7,    4.4,    4.1,      4,    4.4,    4.6,      4,    3.3,    4.2,    4.2,    4.2,    4.3,      3,    4.1,      6,    5.1,    5.9,    5.6,    5.8,    6.6,    4.5,    6.3,    5.8,    6.1,    5.1,    5.3,    5.5,      5,    5.1,    5.3,    5.5,    6.7,    6.9,      5,    5.7,    4.9,    6.7,    4.9,    5.7,      6,    4.8,    4.9,    5.6,    5.8,    6.1,    6.4,    5.6,    5.1,    5.6,    6.1,    5.6,    5.5,    4.8,    5.4,    5.6,    5.1,    5.1,    5.9,    5.7,    5.2,      5,    5.2,    5.4,    5.1 ],
+"PetalWidth": [    0.2,    0.2,    0.2,    0.2,    0.2,    0.4,    0.3,    0.2,    0.2,    0.1,    0.2,    0.2,    0.1,    0.1,    0.2,    0.4,    0.4,    0.3,    0.3,    0.3,    0.2,    0.4,    0.2,    0.5,    0.2,    0.2,    0.4,    0.2,    0.2,    0.2,    0.2,    0.4,    0.1,    0.2,    0.2,    0.2,    0.2,    0.1,    0.2,    0.2,    0.3,    0.3,    0.2,    0.6,    0.4,    0.3,    0.2,    0.2,    0.2,    0.2,    1.4,    1.5,    1.5,    1.3,    1.5,    1.3,    1.6,      1,    1.3,    1.4,      1,    1.5,      1,    1.4,    1.3,    1.4,    1.5,      1,    1.5,    1.1,    1.8,    1.3,    1.5,    1.2,    1.3,    1.4,    1.4,    1.7,    1.5,      1,    1.1,      1,    1.2,    1.6,    1.5,    1.6,    1.5,    1.3,    1.3,    1.3,    1.2,    1.4,    1.2,      1,    1.3,    1.2,    1.3,    1.3,    1.1,    1.3,    2.5,    1.9,    2.1,    1.8,    2.2,    2.1,    1.7,    1.8,    1.8,    2.5,      2,    1.9,    2.1,      2,    2.4,    2.3,    1.8,    2.2,    2.3,    1.5,    2.3,      2,      2,    1.8,    2.1,    1.8,    1.8,    1.8,    2.1,    1.6,    1.9,      2,    2.2,    1.5,    1.4,    2.3,    2.4,    1.8,    1.8,    2.1,    2.4,    2.3,    1.9,    2.3,    2.5,    2.3,    1.9,      2,    2.3,    1.8 ],
+"Species": [ "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "versicolor", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica", "virginica" ] 
 },
-{
- "x":      946713600,
-"y":          41.47 
-},
-{
- "x":      978336000,
-"y":          24.65 
-},
-{
- "x":     1009872000,
-"y":           -2.9 
-},
-{
- "x":     1041408000,
-"y":          24.96 
-},
-{
- "x":     1072944000,
-"y":          38.56 
-},
-{
- "x":     1104566400,
-"y":          45.36 
-},
-{
- "x":     1136102400,
-"y":          68.31 
-},
-{
- "x":     1167638400,
-"y":          77.55 
-},
-{
- "x":     1199174400,
-"y":          11.86 
-},
-{
- "x":     1230796800,
-"y":          41.46 
-},
-{
- "x":     1262332800,
-"y":          62.76 
-},
-{
- "x":     1293868800,
-"y":          66.18 
-},
-{
- "x":     1325404800,
-"y":          92.76 
-},
-{
- "x":     1357027200,
-"y":          155.2 
+"facet": "Species",
+"color": "Species",
+"type": "point" 
 } 
 ],
-"name": "aSP500",
-"info": {
- "915177600": {
- "var1": "aSP500",
-"var2":      915177600 
+"facet": {
+ "type": "wrap",
+"var": "Species" 
 },
-"946713600": {
- "var1": "aSP500",
-"var2":      946713600 
-},
-"978336000": {
- "var1": "aSP500",
-"var2":      978336000 
-},
-"1009872000": {
- "var1": "aSP500",
-"var2":     1009872000 
-},
-"1041408000": {
- "var1": "aSP500",
-"var2":     1041408000 
-},
-"1072944000": {
- "var1": "aSP500",
-"var2":     1072944000 
-},
-"1104566400": {
- "var1": "aSP500",
-"var2":     1104566400 
-},
-"1136102400": {
- "var1": "aSP500",
-"var2":     1136102400 
-},
-"1167638400": {
- "var1": "aSP500",
-"var2":     1167638400 
-},
-"1199174400": {
- "var1": "aSP500",
-"var2":     1199174400 
-},
-"1230796800": {
- "var1": "aSP500",
-"var2":     1230796800 
-},
-"1262332800": {
- "var1": "aSP500",
-"var2":     1262332800 
-},
-"1293868800": {
- "var1": "aSP500",
-"var2":     1293868800 
-},
-"1325404800": {
- "var1": "aSP500",
-"var2":     1325404800 
-},
-"1357027200": {
- "var1": "aSP500",
-"var2":     1357027200 
-} 
-},
-"color":  palette.color()  
-},
-{
- "data": [
- {
- "x":      915177600,
-"y":          64.33 
-},
-{
- "x":      946713600,
-"y":         137.27 
-},
-{
- "x":      978336000,
-"y":         182.89 
-},
-{
- "x":     1009872000,
-"y":         166.29 
-},
-{
- "x":     1041408000,
-"y":         223.49 
-},
-{
- "x":     1072944000,
-"y":         230.83 
-},
-{
- "x":     1104566400,
-"y":         254.71 
-},
-{
- "x":     1136102400,
-"y":         305.97 
-},
-{
- "x":     1167638400,
-"y":          272.6 
-},
-{
- "x":     1199174400,
-"y":         103.89 
-},
-{
- "x":     1230796800,
-"y":         177.18 
-},
-{
- "x":     1262332800,
-"y":         244.62 
-},
-{
- "x":     1293868800,
-"y":         246.93 
-},
-{
- "x":     1325404800,
-"y":         260.36 
-},
-{
- "x":     1357027200,
-"y":         317.11 
-} 
-],
-"name": "Caine Fund",
-"info": {
- "915177600": {
- "var1": "Caine Fund",
-"var2":      915177600 
-},
-"946713600": {
- "var1": "Caine Fund",
-"var2":      946713600 
-},
-"978336000": {
- "var1": "Caine Fund",
-"var2":      978336000 
-},
-"1009872000": {
- "var1": "Caine Fund",
-"var2":     1009872000 
-},
-"1041408000": {
- "var1": "Caine Fund",
-"var2":     1041408000 
-},
-"1072944000": {
- "var1": "Caine Fund",
-"var2":     1072944000 
-},
-"1104566400": {
- "var1": "Caine Fund",
-"var2":     1104566400 
-},
-"1136102400": {
- "var1": "Caine Fund",
-"var2":     1136102400 
-},
-"1167638400": {
- "var1": "Caine Fund",
-"var2":     1167638400 
-},
-"1199174400": {
- "var1": "Caine Fund",
-"var2":     1199174400 
-},
-"1230796800": {
- "var1": "Caine Fund",
-"var2":     1230796800 
-},
-"1262332800": {
- "var1": "Caine Fund",
-"var2":     1262332800 
-},
-"1293868800": {
- "var1": "Caine Fund",
-"var2":     1293868800 
-},
-"1325404800": {
- "var1": "Caine Fund",
-"var2":     1325404800 
-},
-"1357027200": {
- "var1": "Caine Fund",
-"var2":     1357027200 
-} 
-},
-"color":  palette.color()  
-} 
-],
-"renderer": "stack",
-"id": "chart6" 
+"guides": [],
+"coord": [],
+"id": "polyScatter" 
 }
-  chartParams.element = document.querySelector('#chart6')
-  
-  var graphchart6 = new Rickshaw.Graph(chartParams);
-  
-  graphchart6.render();
-  
-  var xAxischart6 = new Rickshaw.Graph.Axis.Time({
- "graph":  graphchart6  
-})
-var yAxischart6 = new Rickshaw.Graph.Axis.Y({
- "graph":  graphchart6 ,
-"orientation": "left",
-"element":  document.getElementById('yAxischart6') ,
-"tickFormat":  Rickshaw.Fixtures.Number.formatKMBT  
-})
-graphchart6.render()
-var legendchart6 = new Rickshaw.Graph.Legend({
- "graph":  graphchart6 ,
-"element":  document.getElementById('legendchart6')  
-})
-var shelvingchart6 = new Rickshaw.Graph.Behavior.Series.Toggle({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
-})
-var hoverDetailchart6 = new Rickshaw.Graph.HoverDetail({
- "graph":  graphchart6  
-})
-var highlightchart6 = new Rickshaw.Graph.Behavior.Series.Highlight({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
-})
-var sliderchart6 = new Rickshaw.Graph.RangeSlider({
- "graph":  graphchart6 ,
-"element":  document.getElementById('sliderchart6')  
-})
-  
-  graphchart6.render();
-  
-</script> 
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_polyScatter = polyjs.chart(chartParams);
+</script>
 
-<pre><code class="r">p4
+
+<h2>Multi barchart using NVD3</h2>
+
+
+<pre><code class="r">add_lib_assets(&quot;NVD3&quot;)  # get assets from online repositories 
 </code></pre>
 
-<iframe src='
-figure/unnamed-chunk-1.html
-' scrolling='no' seamless
-class='rChart rickshaw '
-id=iframe-
-chart6
-></iframe>
 
-<style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<p>[1] &ldquo;<link rel='stylesheet' href=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/css/nv.d3.css>\n<link rel='stylesheet' href=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/css/rNVD3.css>\n<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/js/jquery-1.8.2.min.js></script>\n<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/js/d3.v3.min.js></script>\n<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/js/nv.d3.min-new.js></script>\n<script type='text/javascript' src=/Library/Frameworks/R.framework/Versions/3.0/Resources/library/rCharts/libraries/NVD3/js/fisheye.js></script>&rdquo;</p>
+
+
+<pre><code class="r">hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == &quot;Male&quot;)
+n1 &lt;- nPlot(Freq ~ Hair, group = &quot;Eye&quot;, data = hair_eye_male, type = &quot;multiBarChart&quot;)
+n1$chart(height = 200)  # change plot height Chrome/FF doesn&#39;t automatically get plot height but safari does
+n1$print(&quot;nvd3mbar&quot;)
+</code></pre>
+
+
+<div id = 'nvd3mbar' class = 'rChart nvd3'></div>
+
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawnvd3mbar()
+    });
+    function drawnvd3mbar(){  
+      var opts = {
+ "dom": "nvd3mbar",
+"width":    800,
+"height":    400,
+"x": "Hair",
+"y": "Freq",
+"group": "Eye",
+"type": "multiBarChart",
+"id": "nvd3mbar" 
+},
+        data = [
+ {
+ "Hair": "Black",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     32 
+},
+{
+ "Hair": "Brown",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     53 
+},
+{
+ "Hair": "Red",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Blond",
+"Eye": "Brown",
+"Sex": "Male",
+"Freq":      3 
+},
+{
+ "Hair": "Black",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     11 
+},
+{
+ "Hair": "Brown",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     50 
+},
+{
+ "Hair": "Red",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Blond",
+"Eye": "Blue",
+"Sex": "Male",
+"Freq":     30 
+},
+{
+ "Hair": "Black",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":     10 
+},
+{
+ "Hair": "Brown",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":     25 
+},
+{
+ "Hair": "Red",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":      7 
+},
+{
+ "Hair": "Blond",
+"Eye": "Hazel",
+"Sex": "Male",
+"Freq":      5 
+},
+{
+ "Hair": "Black",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      3 
+},
+{
+ "Hair": "Brown",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":     15 
+},
+{
+ "Hair": "Red",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      7 
+},
+{
+ "Hair": "Blond",
+"Eye": "Green",
+"Sex": "Male",
+"Freq":      8 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .height(   200)
+          
+        
+
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+
+<h2>Scatter Plot from NVD3</h2>
+
+
+<p>Scatter plot example with rCharts using NVD3 JS library</p>
+
+
+<pre><code class="r">data(iris)
+sepal &lt;- iris[, c(1:2, 5)]
+
+
+n2 &lt;- nPlot(Sepal.Length ~ Sepal.Width, data = sepal, type = &quot;scatterChart&quot;, 
+    group = &quot;Species&quot;)
+n2$xAxis(axisLabel = &quot;Sepal.Width&quot;)  # add x axis label
+n2$yAxis(axisLabel = &quot;Sepal.Length&quot;)
+n2$chart(height = 400)  # change plot height Chrome/FF doesn&#39;t automatically get plot height but safari does
+n2$print(&quot;nvd3Scatter&quot;)
+</code></pre>
+
+
+<div id = 'nvd3Scatter' class = 'rChart nvd3'></div>
+
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawnvd3Scatter()
+    });
+    function drawnvd3Scatter(){  
+      var opts = {
+ "dom": "nvd3Scatter",
+"width":    800,
+"height":    400,
+"x": "Sepal.Width",
+"y": "Sepal.Length",
+"type": "scatterChart",
+"group": "Species",
+"id": "nvd3Scatter" 
+},
+        data = [
+ {
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.7,
+"Sepal.Width":    3.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.6,
+"Sepal.Width":    3.1,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.6,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":    3.9,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.6,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.4,
+"Sepal.Width":    2.9,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":    3.1,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":    3.7,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.8,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.8,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.3,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":      4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    4.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":    3.9,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    3.8,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.8,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.7,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.6,
+"Sepal.Width":    3.6,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.8,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.2,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.2,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.7,
+"Sepal.Width":    3.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.8,
+"Sepal.Width":    3.1,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.2,
+"Sepal.Width":    4.1,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    4.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":    3.1,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":    3.6,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.4,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.4,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.5,
+"Sepal.Width":    2.3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.4,
+"Sepal.Width":    3.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.5,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.8,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.8,
+"Sepal.Width":      3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    3.8,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    4.6,
+"Sepal.Width":    3.2,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":    5.3,
+"Sepal.Width":    3.7,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    3.3,
+"Species": "setosa" 
+},
+{
+ "Sepal.Length":      7,
+"Sepal.Width":    3.2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    3.2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.9,
+"Sepal.Width":    3.1,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    2.3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.5,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    3.3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":    2.4,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.6,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.2,
+"Sepal.Width":    2.7,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":      2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.9,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":    2.2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    3.1,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.7,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.2,
+"Sepal.Width":    2.2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":    2.5,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.9,
+"Sepal.Width":    3.2,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.5,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.6,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.8,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    2.6,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    2.4,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    2.4,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.7,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":    2.7,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.4,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":    3.4,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    3.1,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    2.5,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.5,
+"Sepal.Width":    2.6,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.6,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":      5,
+"Sepal.Width":    2.3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":    2.7,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":      3,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.2,
+"Sepal.Width":    2.9,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.1,
+"Sepal.Width":    2.5,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    2.8,
+"Species": "versicolor" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    3.3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.7,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.1,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.9,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.5,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.6,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    4.9,
+"Sepal.Width":    2.5,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.3,
+"Sepal.Width":    2.9,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    2.5,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.2,
+"Sepal.Width":    3.6,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.5,
+"Sepal.Width":    3.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    2.7,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.8,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.7,
+"Sepal.Width":    2.5,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    3.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.5,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.7,
+"Sepal.Width":    3.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.7,
+"Sepal.Width":    2.6,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":    2.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.9,
+"Sepal.Width":    3.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.6,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.7,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.7,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    3.3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.2,
+"Sepal.Width":    3.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.2,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.2,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.4,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.9,
+"Sepal.Width":    3.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.8,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.1,
+"Sepal.Width":    2.6,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    7.7,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    3.4,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.4,
+"Sepal.Width":    3.1,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":      6,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.9,
+"Sepal.Width":    3.1,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    3.1,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.9,
+"Sepal.Width":    3.1,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.8,
+"Sepal.Width":    2.7,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.8,
+"Sepal.Width":    3.2,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":    3.3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.7,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.3,
+"Sepal.Width":    2.5,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.5,
+"Sepal.Width":      3,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    6.2,
+"Sepal.Width":    3.4,
+"Species": "virginica" 
+},
+{
+ "Sepal.Length":    5.9,
+"Sepal.Width":      3,
+"Species": "virginica" 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .height(   400)
+          
+        chart.xAxis
+  .axisLabel("Sepal.Width")
+
+
+        
+        
+        chart.yAxis
+  .axisLabel("Sepal.Length")
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+
+<h2>Histogram Plot from NVD3</h2>
+
+
+<p>Let&#39;s try to plot a multihistogram with rCharts using NVD3 library. We need to first calculate break points and mid points for the histogram bars and produce a single data frame that has the counts, mid-points for bars and group information.</p>
+
+
+<pre><code class="r">data(iris)
+sepalw &lt;- iris[, c(1, 5)]
+hst = hist(sepalw[, 1], plot = FALSE, breaks = 20)
+
+
+data = by(sepalw, sepalw$Species, function(x) data.frame(mid = hst$mids, counts = hist(x[, 
+    1], breaks = hst$breaks, plot = FALSE)$counts, Species = rep(x[1, 2], length(hst$breaks) - 
+    1)))
+data = do.call(&quot;rbind&quot;, data)
+head(data)
+</code></pre>
+
+
+<pre><code>##          mid counts Species
+## setosa.1 4.3      4  setosa
+## setosa.2 4.5      5  setosa
+## setosa.3 4.7      7  setosa
+## setosa.4 4.9     12  setosa
+## setosa.5 5.1     11  setosa
+## setosa.6 5.3      6  setosa
+</code></pre>
+
+
+<p>We got the data in the right format, now let&#39;s plot the histogram with <strong>multiBarChart</strong></p>
+
+
+<pre><code class="r">n3 &lt;- nPlot(counts ~ mid, data = data, type = &quot;multiBarChart&quot;, group = &quot;Species&quot;)
+n3$xAxis(axisLabel = &quot;Sepal.Width&quot;)
+n3$yAxis(axisLabel = &quot;counts&quot;)
+n3$chart(color = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;))
+n2$chart(height = 400)  # change plot height Chrome/FF doesn&#39;t automatically get plot height but safari does
+n3$print(&quot;nvd3Hist&quot;)
+</code></pre>
+
+
+<div id = 'nvd3Hist' class = 'rChart nvd3'></div>
+
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawnvd3Hist()
+    });
+    function drawnvd3Hist(){  
+      var opts = {
+ "dom": "nvd3Hist",
+"width":    800,
+"height":    400,
+"x": "mid",
+"y": "counts",
+"type": "multiBarChart",
+"group": "Species",
+"id": "nvd3Hist" 
+},
+        data = [
+ {
+ "mid":    4.3,
+"counts": 4,
+"Species": "setosa" 
+},
+{
+ "mid":    4.5,
+"counts": 5,
+"Species": "setosa" 
+},
+{
+ "mid":    4.7,
+"counts": 7,
+"Species": "setosa" 
+},
+{
+ "mid":    4.9,
+"counts": 12,
+"Species": "setosa" 
+},
+{
+ "mid":    5.1,
+"counts": 11,
+"Species": "setosa" 
+},
+{
+ "mid":    5.3,
+"counts": 6,
+"Species": "setosa" 
+},
+{
+ "mid":    5.5,
+"counts": 2,
+"Species": "setosa" 
+},
+{
+ "mid":    5.7,
+"counts": 3,
+"Species": "setosa" 
+},
+{
+ "mid":    5.9,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    6.1,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    6.3,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    6.5,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    6.7,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    6.9,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    7.1,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    7.3,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    7.5,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    7.7,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    7.9,
+"counts": 0,
+"Species": "setosa" 
+},
+{
+ "mid":    4.3,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    4.5,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    4.7,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    4.9,
+"counts": 3,
+"Species": "versicolor" 
+},
+{
+ "mid":    5.1,
+"counts": 2,
+"Species": "versicolor" 
+},
+{
+ "mid":    5.3,
+"counts": 1,
+"Species": "versicolor" 
+},
+{
+ "mid":    5.5,
+"counts": 10,
+"Species": "versicolor" 
+},
+{
+ "mid":    5.7,
+"counts": 8,
+"Species": "versicolor" 
+},
+{
+ "mid":    5.9,
+"counts": 6,
+"Species": "versicolor" 
+},
+{
+ "mid":    6.1,
+"counts": 6,
+"Species": "versicolor" 
+},
+{
+ "mid":    6.3,
+"counts": 5,
+"Species": "versicolor" 
+},
+{
+ "mid":    6.5,
+"counts": 3,
+"Species": "versicolor" 
+},
+{
+ "mid":    6.7,
+"counts": 4,
+"Species": "versicolor" 
+},
+{
+ "mid":    6.9,
+"counts": 2,
+"Species": "versicolor" 
+},
+{
+ "mid":    7.1,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    7.3,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    7.5,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    7.7,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    7.9,
+"counts": 0,
+"Species": "versicolor" 
+},
+{
+ "mid":    4.3,
+"counts": 0,
+"Species": "virginica" 
+},
+{
+ "mid":    4.5,
+"counts": 0,
+"Species": "virginica" 
+},
+{
+ "mid":    4.7,
+"counts": 0,
+"Species": "virginica" 
+},
+{
+ "mid":    4.9,
+"counts": 1,
+"Species": "virginica" 
+},
+{
+ "mid":    5.1,
+"counts": 0,
+"Species": "virginica" 
+},
+{
+ "mid":    5.3,
+"counts": 0,
+"Species": "virginica" 
+},
+{
+ "mid":    5.5,
+"counts": 1,
+"Species": "virginica" 
+},
+{
+ "mid":    5.7,
+"counts": 4,
+"Species": "virginica" 
+},
+{
+ "mid":    5.9,
+"counts": 3,
+"Species": "virginica" 
+},
+{
+ "mid":    6.1,
+"counts": 4,
+"Species": "virginica" 
+},
+{
+ "mid":    6.3,
+"counts": 11,
+"Species": "virginica" 
+},
+{
+ "mid":    6.5,
+"counts": 4,
+"Species": "virginica" 
+},
+{
+ "mid":    6.7,
+"counts": 7,
+"Species": "virginica" 
+},
+{
+ "mid":    6.9,
+"counts": 3,
+"Species": "virginica" 
+},
+{
+ "mid":    7.1,
+"counts": 4,
+"Species": "virginica" 
+},
+{
+ "mid":    7.3,
+"counts": 2,
+"Species": "virginica" 
+},
+{
+ "mid":    7.5,
+"counts": 1,
+"Species": "virginica" 
+},
+{
+ "mid":    7.7,
+"counts": 4,
+"Species": "virginica" 
+},
+{
+ "mid":    7.9,
+"counts": 1,
+"Species": "virginica" 
+} 
+]
+  
+      var data = d3.nest()
+        .key(function(d){
+          return opts.group === undefined ? 'main' : d[opts.group]
+        })
+        .entries(data)
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
+          .width(opts.width)
+          .height(opts.height)
+         
+        chart
+  .color([ "red", "blue", "green" ])
+          
+        chart.xAxis
+  .axisLabel("Sepal.Width")
+
+
+        
+        
+        chart.yAxis
+  .axisLabel("counts")
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
 
 </body>
+
 
 </html>
 
