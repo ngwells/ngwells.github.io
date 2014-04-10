@@ -123,145 +123,153 @@
       <span class="post-date">2014-03-17</span>    
       First Post
       
-      
-<div class='chart_container'>
-  <div id='yAxischart6' class='yAxis'></div>
-  <div id='chart6' class='rChart rickshaw'></div>
-  <div id='legendchart6' class='legend'></div>
-  <div id='sliderchart6' class='slider'></div>
-</div>
+   <section class = "example" id = "slide-14">
+<header>
+   <h3>Example 07</h3>
+</header>
+<div class="chart_container">
+  <div id="example07" class="rChart rickshaw"></div>
+  <div id="yAxisexample07" class="yAxis"></div>
+  <div id="xAxisexample07" class="xAxis"></div>
+  <div id="legendexample07" class="legend"></div>
+  <div id="sliderexample07" class="slider"></div>
+  <form id="offset_form" class="toggler">
+    <input type="radio" name="offset" id="lines" value="lines" checked>
+    <label class="lines" for="lines">lines</label>
+    <input type="radio" name="offset" id="stack" value="zero">
+    <label class="stack" for="stack">stack</label>
+  </form>
+   
+ </div>
+ 
+</section>
+
+<pre><code class="r">#use data from previous example
+
+r7 &lt;- Rickshaw$new()
+r7$layer ( 
+  y ~ x,
+  data = data,
+  groups = &quot;name&quot;,
+  type = &quot;line&quot;,
+  height = 240,
+  width = 540
+)
+#r7
+</code></pre>
+
 <script type='text/javascript'> 
   var palette = new Rickshaw.Color.Palette({ scheme: "colorwheel" });
   var chartParams = {
- "dom": "chart6",
-"width":            560,
-"height":            400,
+ "dom": "example07",
+"width":            540,
+"height":            240,
 "scheme": "colorwheel",
+"groups": "name",
 "series": [
  {
  "data": [
  {
- "x":      915177600,
-"y":          55.63 
+ "x": -1893434400,
+"y": 29888542 
 },
 {
- "x":      946713600,
-"y":          41.47 
+ "x": -1577901600,
+"y": 34019792 
 },
 {
- "x":      978336000,
-"y":          24.65 
+ "x": -1262282400,
+"y": 38594100 
 },
 {
- "x":     1009872000,
-"y":           -2.9 
+ "x": -946749600,
+"y": 40143332 
 },
 {
- "x":     1041408000,
-"y":          24.96 
+ "x": -631130400,
+"y": 44460762 
 },
 {
- "x":     1072944000,
-"y":          38.56 
+ "x": -315597600,
+"y": 51619139 
 },
 {
- "x":     1104566400,
-"y":          45.36 
+ "x": 21600,
+"y": 56571663 
 },
 {
- "x":     1136102400,
-"y":          68.31 
+ "x": 315554400,
+"y": 58865670 
 },
 {
- "x":     1167638400,
-"y":          77.55 
+ "x": 631173600,
+"y": 59668632 
 },
 {
- "x":     1199174400,
-"y":          11.86 
+ "x": 946706400,
+"y": 64392776 
 },
 {
- "x":     1230796800,
-"y":          41.46 
-},
-{
- "x":     1262332800,
-"y":          62.76 
-},
-{
- "x":     1293868800,
-"y":          66.18 
-},
-{
- "x":     1325404800,
-"y":          92.76 
-},
-{
- "x":     1357027200,
-"y":          155.2 
+ "x": 1262325600,
+"y": 66927001 
 } 
 ],
-"name": "aSP500",
+"name": "Midwest",
 "info": {
- "915177600": {
- "var1": "aSP500",
-"var2":      915177600 
+ "-1893434400": {
+ "X": 12,
+"name": "Midwest",
+"x": -1893434400 
 },
-"946713600": {
- "var1": "aSP500",
-"var2":      946713600 
+"-1577901600": {
+ "X": 13,
+"name": "Midwest",
+"x": -1577901600 
 },
-"978336000": {
- "var1": "aSP500",
-"var2":      978336000 
+"-1262282400": {
+ "X": 14,
+"name": "Midwest",
+"x": -1262282400 
 },
-"1009872000": {
- "var1": "aSP500",
-"var2":     1009872000 
+"-946749600": {
+ "X": 15,
+"name": "Midwest",
+"x": -946749600 
 },
-"1041408000": {
- "var1": "aSP500",
-"var2":     1041408000 
+"-631130400": {
+ "X": 16,
+"name": "Midwest",
+"x": -631130400 
 },
-"1072944000": {
- "var1": "aSP500",
-"var2":     1072944000 
+"-315597600": {
+ "X": 17,
+"name": "Midwest",
+"x": -315597600 
 },
-"1104566400": {
- "var1": "aSP500",
-"var2":     1104566400 
+"21600": {
+ "X": 18,
+"name": "Midwest",
+"x": 21600 
 },
-"1136102400": {
- "var1": "aSP500",
-"var2":     1136102400 
+"315554400": {
+ "X": 19,
+"name": "Midwest",
+"x": 315554400 
 },
-"1167638400": {
- "var1": "aSP500",
-"var2":     1167638400 
+"631173600": {
+ "X": 20,
+"name": "Midwest",
+"x": 631173600 
 },
-"1199174400": {
- "var1": "aSP500",
-"var2":     1199174400 
+"946706400": {
+ "X": 21,
+"name": "Midwest",
+"x": 946706400 
 },
-"1230796800": {
- "var1": "aSP500",
-"var2":     1230796800 
-},
-"1262332800": {
- "var1": "aSP500",
-"var2":     1262332800 
-},
-"1293868800": {
- "var1": "aSP500",
-"var2":     1293868800 
-},
-"1325404800": {
- "var1": "aSP500",
-"var2":     1325404800 
-},
-"1357027200": {
- "var1": "aSP500",
-"var2":     1357027200 
+"1262325600": {
+ "X": 22,
+"name": "Midwest",
+"x": 1262325600 
 } 
 },
 "color":  palette.color()  
@@ -269,172 +277,363 @@
 {
  "data": [
  {
- "x":      915177600,
-"y":          64.33 
+ "x": -1893434400,
+"y": 25868573 
 },
 {
- "x":      946713600,
-"y":         137.27 
+ "x": -1577901600,
+"y": 29662053 
 },
 {
- "x":      978336000,
-"y":         182.89 
+ "x": -1262282400,
+"y": 34427091 
 },
 {
- "x":     1009872000,
-"y":         166.29 
+ "x": -946749600,
+"y": 35976777 
 },
 {
- "x":     1041408000,
-"y":         223.49 
+ "x": -631130400,
+"y": 39477986 
 },
 {
- "x":     1072944000,
-"y":         230.83 
+ "x": -315597600,
+"y": 44677819 
 },
 {
- "x":     1104566400,
-"y":         254.71 
+ "x": 21600,
+"y": 49040703 
 },
 {
- "x":     1136102400,
-"y":         305.97 
+ "x": 315554400,
+"y": 49135283 
 },
 {
- "x":     1167638400,
-"y":          272.6 
+ "x": 631173600,
+"y": 50809229 
 },
 {
- "x":     1199174400,
-"y":         103.89 
+ "x": 946706400,
+"y": 53594378 
 },
 {
- "x":     1230796800,
-"y":         177.18 
-},
-{
- "x":     1262332800,
-"y":         244.62 
-},
-{
- "x":     1293868800,
-"y":         246.93 
-},
-{
- "x":     1325404800,
-"y":         260.36 
-},
-{
- "x":     1357027200,
-"y":         317.11 
+ "x": 1262325600,
+"y": 55317240 
 } 
 ],
-"name": "Caine Fund",
+"name": "Northeast",
 "info": {
- "915177600": {
- "var1": "Caine Fund",
-"var2":      915177600 
+ "-1893434400": {
+ "X": 1,
+"name": "Northeast",
+"x": -1893434400 
 },
-"946713600": {
- "var1": "Caine Fund",
-"var2":      946713600 
+"-1577901600": {
+ "X": 2,
+"name": "Northeast",
+"x": -1577901600 
 },
-"978336000": {
- "var1": "Caine Fund",
-"var2":      978336000 
+"-1262282400": {
+ "X": 3,
+"name": "Northeast",
+"x": -1262282400 
 },
-"1009872000": {
- "var1": "Caine Fund",
-"var2":     1009872000 
+"-946749600": {
+ "X": 4,
+"name": "Northeast",
+"x": -946749600 
 },
-"1041408000": {
- "var1": "Caine Fund",
-"var2":     1041408000 
+"-631130400": {
+ "X": 5,
+"name": "Northeast",
+"x": -631130400 
 },
-"1072944000": {
- "var1": "Caine Fund",
-"var2":     1072944000 
+"-315597600": {
+ "X": 6,
+"name": "Northeast",
+"x": -315597600 
 },
-"1104566400": {
- "var1": "Caine Fund",
-"var2":     1104566400 
+"21600": {
+ "X": 7,
+"name": "Northeast",
+"x": 21600 
 },
-"1136102400": {
- "var1": "Caine Fund",
-"var2":     1136102400 
+"315554400": {
+ "X": 8,
+"name": "Northeast",
+"x": 315554400 
 },
-"1167638400": {
- "var1": "Caine Fund",
-"var2":     1167638400 
+"631173600": {
+ "X": 9,
+"name": "Northeast",
+"x": 631173600 
 },
-"1199174400": {
- "var1": "Caine Fund",
-"var2":     1199174400 
+"946706400": {
+ "X": 10,
+"name": "Northeast",
+"x": 946706400 
 },
-"1230796800": {
- "var1": "Caine Fund",
-"var2":     1230796800 
+"1262325600": {
+ "X": 11,
+"name": "Northeast",
+"x": 1262325600 
+} 
 },
-"1262332800": {
- "var1": "Caine Fund",
-"var2":     1262332800 
+"color":  palette.color()  
 },
-"1293868800": {
- "var1": "Caine Fund",
-"var2":     1293868800 
+{
+ "data": [
+ {
+ "x": -1893434400,
+"y": 29389330 
 },
-"1325404800": {
- "var1": "Caine Fund",
-"var2":     1325404800 
+{
+ "x": -1577901600,
+"y": 33125803 
 },
-"1357027200": {
- "var1": "Caine Fund",
-"var2":     1357027200 
+{
+ "x": -1262282400,
+"y": 37857633 
+},
+{
+ "x": -946749600,
+"y": 41665901 
+},
+{
+ "x": -631130400,
+"y": 47197088 
+},
+{
+ "x": -315597600,
+"y": 54973113 
+},
+{
+ "x": 21600,
+"y": 62795367 
+},
+{
+ "x": 315554400,
+"y": 75372362 
+},
+{
+ "x": 631173600,
+"y": 85445930 
+},
+{
+ "x": 946706400,
+"y": 100236820 
+},
+{
+ "x": 1262325600,
+"y": 114555744 
+} 
+],
+"name": "South",
+"info": {
+ "-1893434400": {
+ "X": 23,
+"name": "South",
+"x": -1893434400 
+},
+"-1577901600": {
+ "X": 24,
+"name": "South",
+"x": -1577901600 
+},
+"-1262282400": {
+ "X": 25,
+"name": "South",
+"x": -1262282400 
+},
+"-946749600": {
+ "X": 26,
+"name": "South",
+"x": -946749600 
+},
+"-631130400": {
+ "X": 27,
+"name": "South",
+"x": -631130400 
+},
+"-315597600": {
+ "X": 28,
+"name": "South",
+"x": -315597600 
+},
+"21600": {
+ "X": 29,
+"name": "South",
+"x": 21600 
+},
+"315554400": {
+ "X": 30,
+"name": "South",
+"x": 315554400 
+},
+"631173600": {
+ "X": 31,
+"name": "South",
+"x": 631173600 
+},
+"946706400": {
+ "X": 32,
+"name": "South",
+"x": 946706400 
+},
+"1262325600": {
+ "X": 33,
+"name": "South",
+"x": 1262325600 
+} 
+},
+"color":  palette.color()  
+},
+{
+ "data": [
+ {
+ "x": -1893434400,
+"y": 7082086 
+},
+{
+ "x": -1577901600,
+"y": 9213920 
+},
+{
+ "x": -1262282400,
+"y": 12323836 
+},
+{
+ "x": -946749600,
+"y": 14379119 
+},
+{
+ "x": -631130400,
+"y": 20189962 
+},
+{
+ "x": -315597600,
+"y": 28053104 
+},
+{
+ "x": 21600,
+"y": 34804193 
+},
+{
+ "x": 315554400,
+"y": 43172490 
+},
+{
+ "x": 631173600,
+"y": 52786082 
+},
+{
+ "x": 946706400,
+"y": 63197932 
+},
+{
+ "x": 1262325600,
+"y": 71945553 
+} 
+],
+"name": "West",
+"info": {
+ "-1893434400": {
+ "X": 34,
+"name": "West",
+"x": -1893434400 
+},
+"-1577901600": {
+ "X": 35,
+"name": "West",
+"x": -1577901600 
+},
+"-1262282400": {
+ "X": 36,
+"name": "West",
+"x": -1262282400 
+},
+"-946749600": {
+ "X": 37,
+"name": "West",
+"x": -946749600 
+},
+"-631130400": {
+ "X": 38,
+"name": "West",
+"x": -631130400 
+},
+"-315597600": {
+ "X": 39,
+"name": "West",
+"x": -315597600 
+},
+"21600": {
+ "X": 40,
+"name": "West",
+"x": 21600 
+},
+"315554400": {
+ "X": 41,
+"name": "West",
+"x": 315554400 
+},
+"631173600": {
+ "X": 42,
+"name": "West",
+"x": 631173600 
+},
+"946706400": {
+ "X": 43,
+"name": "West",
+"x": 946706400 
+},
+"1262325600": {
+ "X": 44,
+"name": "West",
+"x": 1262325600 
 } 
 },
 "color":  palette.color()  
 } 
 ],
-"renderer": "stack",
-"id": "chart6" 
+"renderer": "line",
+"id": "example07" 
 }
-  chartParams.element = document.querySelector('#chart6')
+  chartParams.element = document.querySelector('#example07')
   
-  var graphchart6 = new Rickshaw.Graph(chartParams);
+  var graphexample07 = new Rickshaw.Graph(chartParams);
   
-  graphchart6.render();
+  graphexample07.render();
   
-  var xAxischart6 = new Rickshaw.Graph.Axis.Time({
- "graph":  graphchart6  
+  var xAxisexample07 = new Rickshaw.Graph.Axis.Time({
+ "graph":  graphexample07 ,
+"element":  document.getElementById('xAxisexample07')  
 })
-var yAxischart6 = new Rickshaw.Graph.Axis.Y({
- "graph":  graphchart6 ,
+var yAxisexample07 = new Rickshaw.Graph.Axis.Y({
+ "graph":  graphexample07 ,
 "orientation": "left",
-"element":  document.getElementById('yAxischart6') ,
+"element":  document.getElementById('yAxisexample07') ,
 "tickFormat":  Rickshaw.Fixtures.Number.formatKMBT  
 })
-graphchart6.render()
-var legendchart6 = new Rickshaw.Graph.Legend({
- "graph":  graphchart6 ,
-"element":  document.getElementById('legendchart6')  
+graphexample07.render()
+var legendexample07 = new Rickshaw.Graph.Legend({
+ "graph":  graphexample07 ,
+"element":  document.getElementById('legendexample07')  
 })
-var shelvingchart6 = new Rickshaw.Graph.Behavior.Series.Toggle({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
+var shelvingexample07 = new Rickshaw.Graph.Behavior.Series.Toggle({
+ "graph":  graphexample07 ,
+"legend":  legendexample07  
 })
-var hoverDetailchart6 = new Rickshaw.Graph.HoverDetail({
- "graph":  graphchart6  
+var hoverDetailexample07 = new Rickshaw.Graph.HoverDetail({
+ "graph":  graphexample07  
 })
-var highlightchart6 = new Rickshaw.Graph.Behavior.Series.Highlight({
- "graph":  graphchart6 ,
-"legend":  legendchart6  
+var highlightexample07 = new Rickshaw.Graph.Behavior.Series.Highlight({
+ "graph":  graphexample07 ,
+"legend":  legendexample07  
 })
-var sliderchart6 = new Rickshaw.Graph.RangeSlider({
- "graph":  graphchart6 ,
-"element":  document.getElementById('sliderchart6')  
-})
+
   
-  graphchart6.render();
+  graphexample07.render();
   
 </script> 
 
