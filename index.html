@@ -27,49 +27,67 @@
             font-weight: 600;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav li {
-            position: relative;
+        .hamburger {
+            font-size: 1.8rem;
             cursor: pointer;
-            font-size: 1.8rem; /* hamburger size */
             user-select: none;
         }
 
-        /* DROPDOWN */
-        nav li ul {
-            display: none;
-            position: absolute;
-            top: 35px;
-            right: 0;
+        /* SIDE PANEL */
+        .side-panel {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease;
+            box-shadow: 3px 0 10px rgba(0,0,0,0.4);
+        }
+
+        .side-panel.open {
+            left: 0;
+        }
+
+        .close-btn {
+            font-size: 1.6rem;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* ACCORDION */
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
             background: #222;
-            padding: 10px 0;
+            padding: 12px;
+            cursor: pointer;
             border-radius: 4px;
-            min-width: 150px;
+            font-size: 1.1rem;
         }
 
-        nav li:hover ul {
-            display: block;
-        }
-
-        nav li ul li {
-            padding: 8px 20px;
-            white-space: nowrap;
-            font-size: 1rem;
-        }
-
-        nav li ul li:hover {
+        .accordion-content {
+            display: none;
             background: #333;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 5px;
         }
 
-        nav a {
+        .accordion-content a {
             color: white;
             text-decoration: none;
+            display: block;
+            padding: 6px 0;
+        }
+
+        .accordion-content a:hover {
+            text-decoration: underline;
         }
 
         /* HERO SECTION */
@@ -94,23 +112,38 @@
 
     <nav>
         <div class="brand">Nathan Wells</div>
-
-        <ul>
-            <li class="hamburger">
-                ☰
-                <ul>
-                    <li><a href="Patents/">Patents</a></li>
-                    <li><a href="Projects/">Projects</a></li>
-                    <li><a href="Trading/">Trading</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="hamburger" onclick="togglePanel()">☰</div>
     </nav>
+
+    <!-- SIDE PANEL -->
+    <div id="sidePanel" class="side-panel">
+        <div class="close-btn" onclick="togglePanel()">✕</div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">Menu</div>
+            <div class="accordion-content">
+                <a href="Patents/">Patents</a>
+                <a href="Projects/">Projects</a>
+                <a href="Trading/">Trading</a>
+            </div>
+        </div>
+    </div>
 
     <section class="hero">
         <h1>Welcome</h1>
         <p>This is my personal GitHub Pages site.</p>
     </section>
+
+    <script>
+        function togglePanel() {
+            document.getElementById("sidePanel").classList.toggle("open");
+        }
+
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
 
 </body>
 </html>
