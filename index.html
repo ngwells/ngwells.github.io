@@ -1,161 +1,114 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathan Wells</title>
 
-  
-  <head>
-    <link href="http://gmpg.org/xfn/11" rel="profile">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  
-    <!-- Enable responsiveness on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  
-    <title>
-      
-      Stat and Stocks &middot; Stat and stocks
-  </title>  
-    <!-- CSS -->
-    <link rel="stylesheet" href="libraries/frameworks/lanyon/public/css/poole.css">
-    <link rel="stylesheet" href="libraries/frameworks/lanyon/public/css/syntax.css">
-    <link rel="stylesheet" href="libraries/frameworks/lanyon/public/css/lanyon.css">
-    <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
-    <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Gentium+Book+Basic|Lato:400' type='text/css'> -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="libraries/frameworks/lanyon/public/favicon.ico">
-  
-    <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-    
-    <!-- Source: http://developerdrive.developerdrive.netdna-cdn.com/wp-content/uploads/2013/07/scroll-to-top.html 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-  
     <style>
-  	.back-to-top {
-  		position: fixed;
-  		bottom: 2em;
-  		right: 5px;
-  		text-decoration: none;
-  		color: #000000;
-  		background-color: rgba(235, 235, 235, 0.80);
-  		font-size: 12px;
-  		padding: 1em;
-  		display: none;
-  	}
-  
-  	.back-to-top:hover {	
-  		background-color: rgba(135, 135, 135, 0.50);
-  	}	
-  	</style>
-    -->
-  </head>  
-  
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #f5f5f5;
+        }
 
-  <body class='theme-base-09 '>
+        /* NAVBAR */
+        nav {
+            background: #111;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-         styles, `#sidebar-checkbox` for behavior. -->
-    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-    
-    <!-- Toggleable sidebar -->
-    <div class="sidebar" id="sidebar">
-      <div class="sidebar-item">
-        <p>I am a stat who trades.
-</p>
-      </div>
-    
-      <nav class="sidebar-nav">
-        <a class="sidebar-nav-item active" href="/">
-          <i class='fa fa-home'> </i>  Home
-        </a>
-        <!-- <a class="sidebar-nav-item" href="/archive/v.zip">
-          <i class='fa fa-download'> </i>  Download
-        </a> -->
-        <a class="sidebar-nav-item" href="/research">
-      <i class='fa fa-cogs'> </i>  Sentiment
-    </a>
-    <a class="sidebar-nav-item" href="/publications">
-      <i class='fa fa-pencil-square'> </i>  Big List
-    </a>
-    <a class="sidebar-nav-item" href="/projects">
-      <i class='fa fa-puzzle-piece'> </i>  Long List
-    </a>
-    <a class="sidebar-nav-item" href="/software">
-      <i class='fa fa-code'> </i>  Software
-    </a>
-    <a class="sidebar-nav-item" href="/blog">
-      <i class='fa fa-archive'> </i>  Blog
-    </a>
-    <a class="sidebar-nav-item" href="">
-          <i class='fa fa-github'> </i> GitHub
-        </a>
-        <!-- <span class="sidebar-nav-item">Currently v</span> -->
-      </nav>
-    
-      <div class="sidebar-item">
-        <p>
-          &copy; 2014. All rights reserved.
-        </p>
-      </div>
-    </div>    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+        nav .brand {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
 
-          <h3 class="masthead-title">
-            <a href="/" title="Home">stats and stocks</a>
-            <small>stats and stocks</small>
-            <div style='float:right;'>
-            <a href="/blog">
-              <i class='fa fa-archive'> </i>
-            </a>
-          
-            <a href="http://github.com/ngwells">
-              <i class='fa fa-github'> </i>
-            </a>
-            </div>
-          </h3>
-        </div>
-      </div>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
 
-      <div class="container content">
-        <div class="post">
-          <h1 class="post-title"></h1>
-          <span class="post-date"></span>
-          <h2>Nathan Wells</h2>
-<div style="float: right;padding-left:15px;">
-  <img src="images/nathan.png" alt="Nathan Wells" title="Nathan Wells" width="125px"/>
-</div>
+        nav li {
+            position: relative;
+            cursor: pointer;
+        }
 
-<p class='lead'>I am a statistician who loves to trade stocks</p>
+        /* DROPDOWN */
+        nav li ul {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            background: #222;
+            padding: 10px 0;
+            border-radius: 4px;
+            min-width: 150px;
+        }
 
-<p class='lead'>I like to make money.</p>
+        nav li:hover ul {
+            display: block;
+        }
 
-<style>
-  .lead {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    font-weight: 200;
-    line-height: 1.4;
-    text-align: justify;
-  }
-</style>
+        nav li ul li {
+            padding: 8px 20px;
+            white-space: nowrap;
+        }
 
-        </div>
+        nav li ul li:hover {
+            background: #333;
+        }
 
-      </div>
-      <!-- <a href="#" class="back-to-top">Back to Top</a> -->
-    </div>
-  
- </body>
-  <!-- Load Javascripts for Widgets -->
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
 
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="brand">Nathan Wells</div>
+
+        <ul>
+            <li>
+                Menu ▾
+                <ul>
+                    <li><a href="Patents/">Patents</a></li>
+                    <li><a href="Projects/">Projects</a></li>
+                    <li><a href="Trading/">Trading</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome</h1>
+        <p>This is my personal GitHub Pages site.</p>
+    </section>
+
+</body>
+</html>
