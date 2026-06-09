@@ -18,26 +18,29 @@
             color: white;
             padding: 15px 25px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
-        }
-
-        nav .brand {
-            font-size: 1.3rem;
-            font-weight: 600;
+            gap: 20px;
         }
 
         .hamburger {
             font-size: 1.8rem;
             cursor: pointer;
             user-select: none;
+            z-index: 10000; /* stays above panel */
+        }
+
+        nav .brand {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-left: auto; /* pushes name to the right */
         }
 
         /* SIDE PANEL */
         .side-panel {
             position: fixed;
             top: 0;
-            left: -260px;
+            left: -260px; /* hidden by default */
             width: 260px;
             height: 100%;
             background: #1a1a1a;
@@ -45,10 +48,11 @@
             padding: 20px;
             transition: left 0.3s ease;
             box-shadow: 3px 0 10px rgba(0,0,0,0.4);
+            z-index: 9999;
         }
 
         .side-panel.open {
-            left: 0;
+            left: 0; /* slide in */
         }
 
         .close-btn {
@@ -111,8 +115,8 @@
 <body>
 
     <nav>
-        <div class="brand">Nathan Wells</div>
         <div class="hamburger" onclick="togglePanel()">☰</div>
+        <div class="brand">Nathan Wells</div>
     </nav>
 
     <!-- SIDE PANEL -->
