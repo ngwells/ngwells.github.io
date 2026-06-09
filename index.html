@@ -40,7 +40,7 @@
         .side-panel {
             position: fixed;
             top: 0;
-            left: -260px; /* hidden by default */
+            left: -300px; /* fully hidden */
             width: 260px;
             height: 100%;
             background: #1a1a1a;
@@ -62,35 +62,16 @@
             display: inline-block;
         }
 
-        /* ACCORDION */
-        .accordion-item {
-            margin-bottom: 10px;
-        }
-
-        .accordion-header {
-            background: #222;
-            padding: 12px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1.1rem;
-        }
-
-        .accordion-content {
-            display: none;
-            background: #333;
-            padding: 10px 15px;
-            border-radius: 4px;
-            margin-top: 5px;
-        }
-
-        .accordion-content a {
+        /* LINK LIST (no accordion) */
+        .link-list a {
             color: white;
             text-decoration: none;
             display: block;
-            padding: 6px 0;
+            padding: 12px 0;
+            font-size: 1.1rem;
         }
 
-        .accordion-content a:hover {
+        .link-list a:hover {
             text-decoration: underline;
         }
 
@@ -123,13 +104,10 @@
     <div id="sidePanel" class="side-panel">
         <div class="close-btn" onclick="togglePanel()">✕</div>
 
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">Menu</div>
-            <div class="accordion-content">
-                <a href="Patents/">Patents</a>
-                <a href="Projects/">Projects</a>
-                <a href="Trading/">Trading</a>
-            </div>
+        <div class="link-list">
+            <a href="Patents/">Patents</a>
+            <a href="Projects/">Projects</a>
+            <a href="Trading/">Trading</a>
         </div>
     </div>
 
@@ -141,11 +119,6 @@
     <script>
         function togglePanel() {
             document.getElementById("sidePanel").classList.toggle("open");
-        }
-
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
         }
     </script>
 
