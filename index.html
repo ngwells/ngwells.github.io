@@ -32,12 +32,13 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 25px;
         }
 
         nav li {
             position: relative;
             cursor: pointer;
+            font-size: 1.8rem; /* hamburger size */
+            user-select: none;
         }
 
         /* DROPDOWN */
@@ -45,7 +46,7 @@
             display: none;
             position: absolute;
             top: 35px;
-            left: 0;
+            right: 0;
             background: #222;
             padding: 10px 0;
             border-radius: 4px;
@@ -59,6 +60,7 @@
         nav li ul li {
             padding: 8px 20px;
             white-space: nowrap;
+            font-size: 1rem;
         }
 
         nav li ul li:hover {
@@ -94,8 +96,8 @@
         <div class="brand">Nathan Wells</div>
 
         <ul>
-            <li>
-                Menu ▾
+            <li class="hamburger">
+                ☰
                 <ul>
                     <li><a href="Patents/">Patents</a></li>
                     <li><a href="Projects/">Projects</a></li>
