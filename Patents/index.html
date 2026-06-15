@@ -3,18 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Patents</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-66NL98Y847');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-66NL98Y847');
+    </script>
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            padding: 20px;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* --- Website Preview Tile (Blurred Background Variant) --- */
+        .site-card-blur {
+            position: relative;
+            display: block;
+            width: 340px;
+            height: 180px;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            margin-top: 20px;
+        }
+
+        .site-card-blur:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+        }
+
+        .site-card-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .site-card-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.55);
+            transform: scale(1.1);
+            transition: transform 0.25s ease, filter 0.25s ease;
+        }
+
+        .site-card-blur:hover .site-card-bg img {
+            transform: scale(1.15);
+            filter: blur(6px) brightness(0.65);
+        }
+
+        .site-card-overlay {
+            position: absolute;
+            inset: 0;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+        }
+
+        .site-card-domain {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+
+        .site-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Patents</h1>
     <p>Content coming soon.</p>
+
+    <!-- Website Preview Tile -->
+    <a class="site-card-blur"
+       href="https://patents.google.com/patent/WO2023121798A1"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Patent WO2023121798A1">
+
+        <div class="site-card-bg">
+            <img src="WO2023121789A1.jpg" alt="Website preview">
+        </div>
+
+        <div class="site-card-overlay">
+            <div class="site-card-domain">patents.google.com</div>
+            <div class="site-card-title">WO2023121798A1 – Patent Page</div>
+        </div>
+
+    </a>
+
 </body>
 </html>
