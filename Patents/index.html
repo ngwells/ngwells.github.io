@@ -21,11 +21,19 @@
             color: #0f172a;
         }
 
+        /* Responsive Grid */
+        .patent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
         /* --- Website Preview Tile (Unblurred Variant) --- */
         .site-card-blur {
             position: relative;
             display: block;
-            width: 340px;
+            width: 100%;
             height: 180px;
             border-radius: 16px;
             overflow: hidden;
@@ -33,7 +41,6 @@
             color: #fff;
             box-shadow: 0 14px 30px rgba(0,0,0,0.35);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
-            margin-top: 20px;
         }
 
         .site-card-blur:hover {
@@ -47,7 +54,6 @@
             overflow: hidden;
         }
 
-        /* 🔥 UNBLURRED IMAGE — clean screenshot */
         .site-card-bg img {
             width: 100%;
             height: 100%;
@@ -60,7 +66,6 @@
             transform: scale(1.12);
         }
 
-        /* Overlay for text readability */
         .site-card-overlay {
             position: absolute;
             inset: 0;
@@ -89,25 +94,100 @@
 
 <body>
     <h1>Patents</h1>
-    <p>Content coming soon.</p>
+    <p>Click a patent to view details.</p>
 
-    <!-- Website Preview Tile -->
-    <a class="site-card-blur"
-       href="https://patents.google.com/patent/WO2023121798A1"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Patent WO2023121798A1">
+    <!-- Responsive Grid of 8 Patents -->
+    <div class="patent-grid">
 
-        <div class="site-card-bg">
-            <img src="WO2023121789A1.jpg" alt="Website preview">
-        </div>
+        <!-- 1 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2023121798A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2023121798A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Maintenance of modules for light sources in semiconductor photolithography</div>
+            </div>
+        </a>
 
-        <div class="site-card-overlay">
-            <div class="site-card-domain">patents.google.com</div>
-            <div class="site-card-title">WO2023121798A1 – Patent Page</div>
-        </div>
+        <!-- 2 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2024019937A9" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024019937A9.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Apparatus for and method of aligning a laser system</div>
+            </div>
+        </a>
 
-    </a>
+        <!-- 3 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2026003632A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2026003632A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Apparatuses and processes for light source system status tracking and maintenance utilizing data to text machine translation</div>
+            </div>
+        </a>
+
+        <!-- 4 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2025003784A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025003784A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Methods for predicting states of light sources</div>
+            </div>
+        </a>
+
+        <!-- 5 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2024161222A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024161222A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Processes for maintenance of modules of light sources in semiconductor photolithography</div>
+            </div>
+        </a>
+
+        <!-- 6 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2024134437A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024134437A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Laser maintenance apparatus and method</div>
+            </div>
+        </a>
+
+        <!-- 7 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2025141352A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025141352A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Laser maintenance using tree-based machine learning models incorporating target-based functions</div>
+            </div>
+        </a>
+
+        <!-- 8 -->
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2025229431A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025229431A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Systems and methods for predicting a next pulse in a light source</div>
+            </div>
+        </a>
+
+    </div>
 
 </body>
 </html>
