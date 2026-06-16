@@ -94,22 +94,31 @@
         <p>
             A rule‑based swing trading system using technical indicators, 
             risk controls, and automated execution. Includes monitoring, 
-            logging, and performance analytics.
+            logging, and performance analytics. I am utilizing the Webull API via python
+            to run throughout the trading day. Price Data is scrapped from Yahoo
+            Finance API. Challenges occur due to the data feed being different 
+            from data within the Webull app. This is not avaiblile via the API. 
+            Trading costs are only 1 cent to buy and sell, nice. 
         </p>
     </div>
-    <!--
+    
     <!-- Project 2 -->
-    <!--
+    
     <div class="project-card">
-        <div class="flowchart-box">Flowchart Placeholder</div>
-        <h2>Project 2: Options Strategy Analyzer</h2>
+        <img src="project2.jpg" class="flowchart-box" />
+        <h2>Project 2: Overnight Trading</h2>
         <p>
-            A dynamic options backtesting and visualization tool. 
-            Supports multi‑leg strategies, volatility modeling, 
-            and scenario stress testing.
+            Problem: Double leveraged ETFs can trade 24 hours a day!
+            To compile this feed, we need to pay for a data service. 
+            However, the data exists in the Webull Desktop App but 
+            is not accessible via the Webull API. I created a pipeline 
+            to capture screen images of the app, access the image, 
+            compile the data , and execute trades. Utilizing the Webull
+            API, Ollama for local LLM, and python code that runs 
+            throughout the extended trading hours to capture the nighttime
+            trading data.
         </p>
     </div>
--->
     <!-- Project 3 -->
    <!--
     <div class="project-card">
