@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nathan Wells</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         body {
             margin: 0;
@@ -77,7 +79,7 @@
 
         /* HERO SECTION */
         .hero {
-            padding: 80px 20px;
+            padding: 80px 20px 40px 20px;
             text-align: center;
         }
 
@@ -90,16 +92,86 @@
             font-size: 1.2rem;
             color: #555;
         }
-    </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-66NL98Y847');
-</script>
+        /* CONTACT SECTION & EMAIL GRID */
+        .contact-section {
+            max-width: 800px;
+            margin: 40px auto 80px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .contact-section p {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .email-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            background: #ffffff;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #334155;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .icon-wrapper {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .email-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Hover States: Lift and green accent glow */
+        .email-card:hover {
+            transform: translateY(-4px);
+            border-color: #22c55e;
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.15);
+            color: #0f172a;
+        }
+
+        .email-card:hover .icon-wrapper {
+            transform: scale(1.1);
+        }
+
+        /* Brand Colors on Hover */
+        .gmail-mail:hover .icon-wrapper { color: #ea4335; }
+        .outlook-mail:hover .icon-wrapper { color: #0078d4; }
+        .apple-mail:hover .icon-wrapper { color: #6001d2; }
+        .default-mail:hover .icon-wrapper { color: #22c55e; }
+    </style>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-66NL98Y847');
+    </script>
 </head>
 
 <body>
@@ -109,7 +181,6 @@
         <div class="brand">Nathan Wells</div>
     </nav>
 
-    <!-- SIDE PANEL -->
     <div id="sidePanel" class="side-panel">
         <div class="close-btn" onclick="togglePanel()">✕</div>
 
@@ -123,6 +194,33 @@
     <section class="hero">
         <h1>Welcome</h1>
         <p>This is my personal GitHub Pages site.</p>
+    </section>
+
+    <section class="contact-section">
+        <h2>Connect With Me</h2>
+        <p>Feel free to reach out via your preferred email service for any collaboration opportunities or questions!</p>
+        
+        <div class="email-grid">
+            <a href="mailto:your.email@example.com?subject=Collaboration%20Opportunity" class="email-card default-mail">
+                <div class="icon-wrapper"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <span class="email-label">Default Mail App</span>
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.email@example.com&su=Collaboration%20Opportunity" target="_blank" class="email-card gmail-mail">
+                <div class="icon-wrapper"><i class="fa-brands fa-google"></i></div>
+                <span class="email-label">Gmail</span>
+            </a>
+
+            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=your.email@example.com&subject=Collaboration%20Opportunity" target="_blank" class="email-card outlook-mail">
+                <div class="icon-wrapper"><i class="fa-windows fa-brands"></i></div>
+                <span class="email-label">Outlook / Hotmail</span>
+            </a>
+
+            <a href="https://compose.mail.yahoo.com/?to=your.email@example.com&subject=Collaboration%20Opportunity" target="_blank" class="email-card apple-mail">
+                <div class="icon-wrapper"><i class="fa-brands fa-yahoo"></i></div>
+                <span class="email-label">Yahoo Mail</span>
+            </a>
+        </div>
     </section>
 
     <script>
