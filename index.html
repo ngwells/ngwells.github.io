@@ -29,20 +29,20 @@
             font-size: 1.8rem;
             cursor: pointer;
             user-select: none;
-            z-index: 10000; /* stays above panel */
+            z-index: 10000;
         }
 
         nav .brand {
             font-size: 1.3rem;
             font-weight: 600;
-            margin-left: auto; /* pushes name to the right */
+            margin-left: auto;
         }
 
         /* SIDE PANEL */
         .side-panel {
             position: fixed;
             top: 0;
-            left: -300px; /* fully hidden */
+            left: -300px;
             width: 260px;
             height: 100%;
             background: #1a1a1a;
@@ -54,7 +54,7 @@
         }
 
         .side-panel.open {
-            left: 0; /* slide in */
+            left: 0;
         }
 
         .close-btn {
@@ -64,7 +64,6 @@
             display: inline-block;
         }
 
-        /* LINK LIST (no accordion) */
         .link-list a {
             color: white;
             text-decoration: none;
@@ -93,7 +92,29 @@
             color: #555;
         }
 
-        /* CONTACT SECTION & EMAIL GRID */
+        /* ABOUT SECTION */
+        .about {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.65;
+            color: #334155;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* CONTACT SECTION */
         .contact-section {
             max-width: 800px;
             margin: 40px auto 80px auto;
@@ -145,7 +166,6 @@
             font-size: 0.95rem;
         }
 
-        /* Hover States: Lift and green accent glow */
         .email-card:hover {
             transform: translateY(-4px);
             border-color: #22c55e;
@@ -157,19 +177,17 @@
             transform: scale(1.1);
         }
 
-        /* Brand Colors on Hover */
         .gmail-mail:hover .icon-wrapper { color: #ea4335; }
         .outlook-mail:hover .icon-wrapper { color: #0078d4; }
         .apple-mail:hover .icon-wrapper { color: #6001d2; }
         .default-mail:hover .icon-wrapper { color: #22c55e; }
     </style>
-    
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-66NL98Y847');
     </script>
 </head>
@@ -196,10 +214,23 @@
         <p>This is my personal GitHub Pages site.</p>
     </section>
 
+    <!-- ⭐ NEW ABOUT SECTION ⭐ -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Data science leader with 10+ years of experience building production‑grade machine learning pipelines 
+            and large‑scale decision analytics. I specialize in converting complex, noisy data into deployable models 
+            that drive measurable impact across finance, operations, and customer service. My background spans big data 
+            processing, statistical modeling, forecasting, AI applications, and algorithm design—supported by a strong 
+            track record of cross‑functional collaboration with high‑performing teams. I combine deep technical rigor 
+            with clear, architecture‑level thinking to deliver strategies that scale.
+        </p>
+    </section>
+
     <section class="contact-section">
         <h2>Connect With Me</h2>
         <p>Feel free to reach out via your preferred email service for any collaboration opportunities or questions!</p>
-        
+
         <div class="email-grid">
             <a href="mailto:your.email@example.com?subject=Collaboration%20Opportunity" class="email-card default-mail">
                 <div class="icon-wrapper"><i class="fa-solid fa-envelope-open-text"></i></div>
@@ -212,22 +243,3 @@
             </a>
 
             <a href="https://outlook.live.com/mail/0/deeplink/compose?to=your.email@example.com&subject=Collaboration%20Opportunity" target="_blank" class="email-card outlook-mail">
-                <div class="icon-wrapper"><i class="fa-windows fa-brands"></i></div>
-                <span class="email-label">Outlook / Hotmail</span>
-            </a>
-
-            <a href="https://compose.mail.yahoo.com/?to=your.email@example.com&subject=Collaboration%20Opportunity" target="_blank" class="email-card apple-mail">
-                <div class="icon-wrapper"><i class="fa-brands fa-yahoo"></i></div>
-                <span class="email-label">Yahoo Mail</span>
-            </a>
-        </div>
-    </section>
-
-    <script>
-        function togglePanel() {
-            document.getElementById("sidePanel").classList.toggle("open");
-        }
-    </script>
-
-</body>
-</html>
