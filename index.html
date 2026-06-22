@@ -183,13 +183,6 @@
         .default-mail:hover .icon-wrapper { color: #22c55e; }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-66NL98Y847');
-    </script>
 </head>
 
 <body>
@@ -214,7 +207,6 @@
         <p>This is my personal GitHub Pages site.</p>
     </section>
 
-    <!-- ⭐ NEW ABOUT SECTION ⭐ -->
     <section class="about">
         <h2>About Me</h2>
         <p>
@@ -232,14 +224,43 @@
         <p>Feel free to reach out via your preferred email service for any collaboration opportunities or questions!</p>
 
         <div class="email-grid">
-            <a href="mailto:your.email@example.com?subject=Collaboration%20Opportunity" class="email-card default-mail">
+
+            <!-- Default Mail -->
+            <a href="mailto:your.email@example.com?subject=Collaboration%20Opportunity" 
+               class="email-card default-mail">
                 <div class="icon-wrapper"><i class="fa-solid fa-envelope-open-text"></i></div>
                 <span class="email-label">Default Mail App</span>
             </a>
 
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.email@example.com&su=Collaboration%20Opportunity" target="_blank" class="email-card gmail-mail">
+            <!-- Gmail -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.email@example.com&su=Collaboration%20Opportunity" 
+               target="_blank" class="email-card gmail-mail">
                 <div class="icon-wrapper"><i class="fa-brands fa-google"></i></div>
                 <span class="email-label">Gmail</span>
             </a>
 
-            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=your.email@example.com&subject=Collaboration%20Opportunity" target="_blank" class="email-card outlook-mail">
+            <!-- Outlook -->
+            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=your.email@example.com&subject=Collaboration%20Opportunity" 
+               target="_blank" class="email-card outlook-mail">
+                <div class="icon-wrapper"><i class="fa-brands fa-windows"></i></div>
+                <span class="email-label">Outlook / Hotmail</span>
+            </a>
+
+            <!-- Apple / Yahoo -->
+            <a href="https://compose.mail.yahoo.com/?to=your.email@example.com&subject=Collaboration%20Opportunity" 
+               target="_blank" class="email-card apple-mail">
+                <div class="icon-wrapper"><i class="fa-brands fa-yahoo"></i></div>
+                <span class="email-label">Yahoo / Apple Mail</span>
+            </a>
+
+        </div>
+    </section>
+
+    <script>
+        function togglePanel() {
+            document.getElementById("sidePanel").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
