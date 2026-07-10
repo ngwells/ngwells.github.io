@@ -1,11 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trading</title>
+    <title>Trading Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-66NL98Y847');
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+        }
+
+        .flowchart-box {
+            width: 100%;
+            height: 220px;
+            background: #e9eef5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            border: 2px dashed #c5cdd8;
+        }
+
+        .project-card h2 {
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        .project-card p {
+            line-height: 1.5;
+            color: #444;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Trading</h1>
-    <p>Content coming soon.</p>
+
+<header>
+    <h1>Trading Projects</h1>
+    <p>Algorithmic systems, automation, and research workflows. There is alot of personal API codes and information in these personalized pipelines.</p>
+    <p>I'm happy to discuss these further.</p>
+</header>
+
+<section class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+        <img src="CartoonSwing.jpg" class="flowchart-box" />
+        <h2>Project 1: Swing Trade Engine</h2>
+        <p>
+            A rule‑based swing trading system using technical indicators, 
+            risk controls, and automated execution. Includes monitoring, 
+            logging, and performance analytics. I am utilizing the Webull API via python
+            to run throughout the trading day. Price Data is scrapped from Yahoo
+            Finance API. Challenges occur due to the data feed being different 
+            from data within the Webull app. This is not avaiblile via the API. 
+            Trading costs are only 2 cents per transaction, nice. 
+        </p>
+    </div>
+    
+    <!-- Project 2 -->
+    
+    <div class="project-card">
+        <img src="project2.jpg" class="flowchart-box" />
+        <h2>Project 2: Overnight Trading</h2>
+        <p>
+            Problem: Double leveraged ETFs can trade 24 hours a day!
+            To compile this feed, we need to pay for a data service. 
+            However, the data exists in the Webull Desktop App but 
+            is not accessible via the Webull API. I created a pipeline 
+            to capture screen images of the app, access the image, 
+            compile the data , and execute trades. Utilizing the Webull
+            API, Ollama for local LLM, and python code that runs 
+            throughout the extended trading hours to capture the nighttime
+            trading data.
+        </p>
+    </div>
+    <!-- Project 3 -->
+   <!--
+    <div class="project-card">
+        <div class="flowchart-box">Flowchart Placeholder</div>
+        <h2>Project 3: Market Data Pipeline</h2>
+        <p>
+            A fully automated data ingestion pipeline for equities, 
+            options, and fundamentals. Cleans, normalizes, and stores 
+            data for downstream research.
+        </p>
+    </div>
+-->
+    <!-- Project 4 -->
+    <!--
+    <div class="project-card">
+        <div class="flowchart-box">Flowchart Placeholder</div>
+        <h2>Project 4: ML Signal Lab</h2>
+        <p>
+            A machine‑learning experimentation environment for 
+            feature engineering, model training, and signal validation 
+            using walk‑forward analysis.
+        </p>
+    </div>
+-->
+</section>
+
 </body>
 </html>

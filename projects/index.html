@@ -1,11 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Projects</title>
+<meta charset="UTF-8">
+<title>Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-66NL98Y847');
+</script>
+
+<style>
+    body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: #fafafa;
+        color: #222;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+    }
+
+    /* Option 2: Back Button Styling */
+    .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #22d3ee;
+        color: #0f172a;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+        background-color: #0ea5e9;
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+
+    .gallery-grid {
+        display: grid;
+        gap: 30px;
+        padding: 20px 40px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .gallery-item {
+        background: white;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .gallery-item .content {
+        padding: 20px;
+    }
+
+    .gallery-item h2 {
+        margin-top: 0;
+        font-size: 1.4rem;
+    }
+
+    .gallery-item p {
+        color: #444;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+</style>
 </head>
+
 <body>
+
+<header>
     <h1>Projects</h1>
-    <p>Content coming soon.</p>
+    <p>Here are some projects I am experimenting with to innovate on new ideas while maintaining and learning new skills. Since a lot of the projects contain personal API codes and information, I am not sharing code but feel free to ask about the code or any collaboration oppertunities. I'm happy to discuss!  </p>
+    
+    <a href="../" class="back-btn">← Back to Home</a>
+</header>
+
+<section class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="mistralshatbot.jpg" alt="Project 1">
+        <div class="content">
+            <h2>
+              <a href="https://apps-1-63z3.onrender.com/" target="_blank">
+                Mistral Chatbot </a>
+            </h2>
+            <p>
+                Quick and easy website using python and html syntax with the Mistral API. The site is stored in Github and deployed at Render.com (if its deployed). Have a convo with the LLM.
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="JDpipeline.jpg" alt="Project 2">
+        <div class="content">
+            <h2>Cover Letter Agent</h2>
+            <p>
+                One of the more manual actions in the job applicaiton process is creating a personalized cover letter for the position you are applying too. I created this (python-based) agent to search my gmail (GMAIL API), find jobs descriptions and create a cover letter (Ollama) using my resume/experience and injecting prompts to create the letter. I save it locally incase i want to use it when applying to a job. 
+              Processing is done locally but can be migrated in the cloud via Gemini for "cloud-based" process.
+            </p>
+        </div>
+    </div>
+  <div class="gallery-item">
+        <a href="video.html">
+            <img src="xbotgoimage.jpg" alt="Project 3">
+        </a>
+        <div class="content">
+            <h2>Video Streaming Platform</h2>
+            <p>
+                I love the Xbotgo AI Camera live streaming capabilties. They provide their own platform and the OBS link. I wanna play with creating my own stream platform. I'll see how far I can get.
+            </p>
+        </div>
+    </div>
+    </section>
+
 </body>
 </html>

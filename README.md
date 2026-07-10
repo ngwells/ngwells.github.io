@@ -1,2 +1,2 @@
-# Ngwells.github.io
+# ngwells.github.io
 Personal Site for Data Science, Statistics, Projects, Trading and Ideas

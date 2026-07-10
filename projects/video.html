@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBotGo Live Stream</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0f0f0f;
+            font-family: system-ui, sans-serif;
+            color: #e5e5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        video {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 12px;
+            background: #000;
+            box-shadow: 0 0 25px rgba(0,0,0,0.6);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            text-align: center;
+            max-width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>XBotGo Live Stream</h1>
+
+    <video id="video" controls autoplay muted playsinline></video>
+
+    <script>
+        const video = document.getElementById("video");
+
+        const streamURL = "https://prod-global-live-hls.xbotgo.net/prod-global-xbotgo-net/8B26828B697644D19EC5E96D270C50EC.m3u8?sign=9d98367972668dceb672c00574fb5f6d&t=1782248734&region=1";
+
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(streamURL);
+            hls.attachMedia(video);
+        } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+            video.src = streamURL;
+        }
+    </script>
+
+    <div class="note">
+        If the stream does not load immediately, refresh the page — XBotGo HLS links are time‑limited and regenerate periodically.
+    </div>
+
+</body>
+</html>

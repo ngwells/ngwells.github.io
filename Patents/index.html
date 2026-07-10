@@ -3,9 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <title>Patents</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66NL98Y847"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-66NL98Y847');
+    </script>
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            padding: 20px;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Responsive Grid */
+        .patent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        /* --- Website Preview Tile (Unblurred Variant) --- */
+        .site-card-blur {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 180px;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .site-card-blur:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+        }
+
+        /* --- Targeted Blue Hue Glow for Patent 1 --- */
+        .blue-glow-card {
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.35);
+        }
+
+        .blue-glow-card:hover {
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.65);
+        }
+
+        .site-card-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+        /* Option 2: Back Button Styling */
+    .back-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #22d3ee;
+        color: #0f172a;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+        background-color: #0ea5e9;
+        color: #ffffff;
+        transform: translateY(-1px);
+    }
+        .site-card-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            transition: transform 0.25s ease;
+        }
+
+        .site-card-blur:hover .site-card-bg img {
+            transform: scale(1.12);
+        }
+
+        .site-card-overlay {
+            position: absolute;
+            inset: 0;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
+        }
+
+        .site-card-domain {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+
+        .site-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Patents</h1>
-    <p>Content coming soon.</p>
+    <p>Click a patent to view details. A blue hue on around the patent indicates that I am the first author of the patent. Otherwise, I was a contributor. 
+        Most of these patents focus on ideas and AI/ML methods for evaluating a machine's performance. 
+        My first authored patents include: a machine data-2-text transalation model, a cost function modified decision tree method, and a generalizable ML model section approach. 
+        I believe there are a few more coming but sometimes they take years to materialize. 
+        These ideas include automated service plan creation based on ML model performance triggers and model interpetability method using fuzzy logic.  
+        Stay tuned!</p>
+
+        <p>Always happy to collaborate on new ideas with any type of data. </p>
+        <a href="../" class="back-btn">← Back to Home</a>
+    <div class="patent-grid">
+
+        <a class="site-card-blur blue-glow-card" href="https://patents.google.com/patent/WO2023121798A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2023121789A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Maintenance of modules for light sources in semiconductor photolithography</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2024019937A9" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024019937A9.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Apparatus for and method of aligning a laser system</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur blue-glow-card" href="https://patents.google.com/patent/WO2026003632A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2026003632A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Apparatuses and processes for light source system status tracking and maintenance utilizing data to text machine translation</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2025003784A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025003784A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Methods for predicting states of light sources</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur blue-glow-card" href="https://patents.google.com/patent/WO2024161222A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024161222A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Processes for maintenance of modules of light sources in semiconductor photolithography</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2024134437A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2024134437A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Laser maintenance apparatus and method</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur blue-glow-card" href="https://patents.google.com/patent/WO2025141352A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025141352A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Laser maintenance using tree-based machine learning models incorporating target-based functions</div>
+            </div>
+        </a>
+
+        <a class="site-card-blur" href="https://patents.google.com/patent/WO2025229431A1" target="_blank">
+            <div class="site-card-bg">
+                <img src="WO2025229431A1.jpg" alt="Patent preview">
+            </div>
+            <div class="site-card-overlay">
+                <div class="site-card-domain">patents.google.com</div>
+                <div class="site-card-title">Systems and methods for predicting a next pulse in a light source</div>
+            </div>
+        </a>
+
+    </div>
+
 </body>
 </html>
