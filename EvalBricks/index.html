@@ -25,7 +25,22 @@
     <a href="#" @click.prevent="page = 'pricing'" class="hover:text-[#4834D4] transition-all duration-300">Pricing</a>
   </div>
 </nav>
+</nav>
 
+<header class="relative w-full h-[50vh] overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0">
+        <img src="blurredbg.jpeg" alt="Soccer pitch" class="w-full h-full object-cover blur-sm scale-105">
+        <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <div class="relative z-10 text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+            Welcome to EvalBricks<br>
+            <span class="text-2xl md:text-4xl font-light">modernizing tryout and roster building</span>
+        </h1>
+    </div>
+</header>
+
+<main class="flex-grow p-10">
     <main class="flex-grow p-10">
         <div x-show="page === 'home'" class="max-w-5xl mx-auto space-y-8">
             <section class="bg-white p-8 rounded-xl border-l-8 border-[#4834D4] shadow-sm">
