@@ -43,10 +43,84 @@
 <main class="flex-grow p-10">
     <main class="flex-grow p-10">
         <div x-show="page === 'home'" class="max-w-5xl mx-auto space-y-8">
-            <section class="bg-white p-8 rounded-xl border-l-8 border-[#4834D4] shadow-sm">
-                <h2 class="text-3xl font-bold mb-4 text-[#2D3436]">The Problem</h2>
-                <p class="text-lg text-[#636E72]">Addressing the inefficiencies in current market workflows and the friction caused by legacy architecture.</p>
-            </section>
+            <section class="bg-white p-8 rounded-2xl border-t-8 border-[#003366] shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-[650px]">
+    
+    <div class="pb-4 mb-4 border-b border-[#E0DED7] shrink-0">
+        <h2 class="text-3xl font-extrabold mb-1 text-[#2D3436] tracking-tight">The Problem</h2>
+        <h3 class="text-sm font-semibold text-[#0099CC] uppercase tracking-wider leading-snug">
+            The Modern Youth Sports Tryout Is Operationally Broken
+        </h3>
+    </div>
+
+    <div class="overflow-y-auto pr-4 space-y-8 flex-grow" style="scrollbar-width: thin; scrollbar-color: #0099CC transparent;">
+        
+        <div class="relative pl-10">
+            <i data-lucide="activity" class="absolute left-0 top-0.5 w-6 h-6 text-[#003366]"></i>
+            <h4 class="font-bold text-[#2D3436] text-base mb-2">1. Impossible Multitasking</h4>
+            <p class="text-sm text-[#636E72] mb-3">During a drill or scrimmage, one evaluator must simultaneously:</p>
+            <ul class="list-none space-y-2 mb-4 text-sm text-[#636E72]">
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Track each athlete’s jersey number</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Observe multiple players at once</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Record notes on paper</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Look down, look up, and not miss anything</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Remember context about positions, strengths, and weaknesses</li>
+            </ul>
+            <div class="bg-[#F5F2EF] p-3 rounded-lg border-l-4 border-[#0099CC]">
+                <p class="text-xs text-[#2D3436] font-medium leading-relaxed">This is cognitively unrealistic. Human attention is limited, and paper‑based workflows force evaluators to choose between watching the play or writing the note.</p>
+            </div>
+        </div>
+
+        <div class="relative pl-10">
+            <i data-lucide="file-warning" class="absolute left-0 top-0.5 w-6 h-6 text-[#003366]"></i>
+            <h4 class="font-bold text-[#2D3436] text-base mb-2">2. Fragmented, Unreliable Data</h4>
+            <p class="text-sm text-[#636E72] mb-3">Old-fashioned pen-and-paper systems introduce structural failures:</p>
+            <ul class="list-none space-y-2 mb-4 text-sm text-[#636E72]">
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Notes are inconsistent across evaluators</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Handwriting varies, gets messy, or is incomplete</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Observations lack timestamps or drill context</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Data is scattered across multiple sheets</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> No way to validate accuracy or bias</li>
+            </ul>
+            <div class="bg-[#F5F2EF] p-3 rounded-lg border-l-4 border-[#0099CC]">
+                <p class="text-xs text-[#2D3436] font-medium leading-relaxed">The result: tryout data becomes subjective, incomplete, and vulnerable to memory errors.</p>
+            </div>
+        </div>
+
+        <div class="relative pl-10">
+            <i data-lucide="users" class="absolute left-0 top-0.5 w-6 h-6 text-[#003366]"></i>
+            <h4 class="font-bold text-[#2D3436] text-base mb-2">3. Error-Prone Tracking</h4>
+            <p class="text-sm text-[#636E72] mb-3">Evaluators must constantly map: <strong>Player → Jersey number → Position → Drill → Performance notes</strong>.</p>
+            <div class="bg-[#F5F2EF] p-3 rounded-lg border-l-4 border-[#0099CC]">
+                <p class="text-xs text-[#2D3436] font-medium leading-relaxed">One misread jersey number or rushed scribble can misassign an entire evaluation. Multiply that across 40–100 players and the error rate skyrockets.</p>
+            </div>
+        </div>
+
+        <div class="relative pl-10">
+            <i data-lucide="puzzle" class="absolute left-0 top-0.5 w-6 h-6 text-[#003366]"></i>
+            <h4 class="font-bold text-[#2D3436] text-base mb-2">4. Roster Creation is Guesswork</h4>
+            <p class="text-sm text-[#636E72] mb-3">When it’s time to build a roster, evaluators must:</p>
+            <ul class="list-none space-y-2 mb-4 text-sm text-[#636E72]">
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Remember which notes belong to which player</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Infer which players fit positional needs</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Reconcile multiple sheets of paper</li>
+                <li class="flex items-start"><span class="text-[#0099CC] mr-2">•</span> Rely on memory (“Oh yeah, I remember that kid…”)</li>
+            </ul>
+            <div class="bg-[#F5F2EF] p-3 rounded-lg border-l-4 border-[#0099CC]">
+                <p class="text-xs text-[#2D3436] font-medium leading-relaxed">This is where the system completely collapses. Coaches end up selecting players based on impressions rather than evidence.</p>
+            </div>
+        </div>
+
+        <div class="relative pl-10">
+            <i data-lucide="git-merge" class="absolute left-0 top-0.5 w-6 h-6 text-[#003366]"></i>
+            <h4 class="font-bold text-[#2D3436] text-base mb-2">5. Matching Needs vs. Talent</h4>
+            <p class="text-sm text-[#636E72] mb-3">A roster isn’t just “pick the best players.” It’s filling gaps, balancing strengths, building chemistry, and ensuring tactical coverage.</p>
+            <div class="bg-[#F5F2EF] p-3 rounded-lg border-l-4 border-[#0099CC]">
+                <p class="text-xs text-[#2D3436] font-medium leading-relaxed">Paper notes do not support structured decision-making. They do not map traits to positional requirements, and they do not help evaluators compare players objectively.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
             <section class="bg-white p-8 rounded-xl border-l-8 border-[#6C5CE7] shadow-sm">
                 <h2 class="text-3xl font-bold mb-4 text-[#2D3436]">Our Needs</h2>
                 <p class="text-lg text-[#636E72]">Defining the requirements for high-availability systems, real-time data processing, and user-centric design.</p>
