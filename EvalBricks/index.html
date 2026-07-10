@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Adaptive Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#F5F2EF] text-[#2D3436] min-h-screen flex flex-col" x-data="{ page: 'home' }">
+
+    <nav class="flex justify-between items-center py-6 px-10 bg-white border-b border-[#E0DED7]">
+        <div class="text-2xl font-bold tracking-tight text-[#4834D4]">BRAND</div>
+        <div class="space-x-8 font-medium">
+            <a href="#" @click.prevent="page = 'home'" class="hover:text-[#4834D4] transition">HOME</a>
+            <a href="#" @click.prevent="page = 'platform'" class="hover:text-[#4834D4] transition">Platform</a>
+            <a href="#" @click.prevent="page = 'about'" class="hover:text-[#4834D4] transition">About</a>
+            <a href="https://apps-soccergrade.onrender.com" class="hover:text-[#4834D4] transition">Create/Login</a>
+            <a href="#" @click.prevent="page = 'pricing'" class="hover:text-[#4834D4] transition">Pricing</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow p-10">
+        <div x-show="page === 'home'" class="max-w-5xl mx-auto space-y-8">
+            <section class="bg-white p-8 rounded-xl border-l-8 border-[#4834D4] shadow-sm">
+                <h2 class="text-3xl font-bold mb-4 text-[#2D3436]">The Problem</h2>
+                <p class="text-lg text-[#636E72]">Addressing the inefficiencies in current market workflows and the friction caused by legacy architecture.</p>
+            </section>
+            <section class="bg-white p-8 rounded-xl border-l-8 border-[#6C5CE7] shadow-sm">
+                <h2 class="text-3xl font-bold mb-4 text-[#2D3436]">Our Needs</h2>
+                <p class="text-lg text-[#636E72]">Defining the requirements for high-availability systems, real-time data processing, and user-centric design.</p>
+            </section>
+            <section class="bg-white p-8 rounded-xl border-l-8 border-[#A29BFE] shadow-sm">
+                <h2 class="text-3xl font-bold mb-4 text-[#2D3436]">The Delivery</h2>
+                <p class="text-lg text-[#636E72]">Delivering an automated, scalable solution that integrates seamlessly into existing trading and analysis pipelines.</p>
+            </section>
+        </div>
+
+        <div x-show="page !== 'home'" class="flex justify-center items-center h-full">
+            <h1 class="text-5xl font-extralight text-[#B2BEC3]">Info Coming Soon...</h1>
+        </div>
+    </main>
+
+    <footer class="bg-[#2D3436] text-white py-12 px-10 mt-auto">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+            <h3 class="text-xl font-semibold mb-8 text-[#A29BFE]">Contact Us</h3>
+            <div class="flex space-x-10 text-sm">
+                <a href="mailto:support@apple.com" class="flex flex-col items-center hover:text-[#A29BFE] transition">
+                    <i data-lucide="mail" class="mb-2"></i>
+                    <span>Apple</span>
+                </a>
+                <a href="https://mail.google.com" target="_blank" class="flex flex-col items-center hover:text-[#A29BFE] transition">
+                    <i data-lucide="send" class="mb-2"></i>
+                    <span>Gmail</span>
+                </a>
+                <a href="https://mail.yahoo.com" target="_blank" class="flex flex-col items-center hover:text-[#A29BFE] transition">
+                    <i data-lucide="message-square" class="mb-2"></i>
+                    <span>Yahoo</span>
+                </a>
+                <a href="mailto:support@local.com" class="flex flex-col items-center hover:text-[#A29BFE] transition">
+                    <i data-lucide="at-sign" class="mb-2"></i>
+                    <span>Local</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
