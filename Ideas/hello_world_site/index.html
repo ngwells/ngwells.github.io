@@ -19,30 +19,32 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 <body class="bg-gray-900 text-white font-sans">
-  <div class="hero min-h-screen bg-opacity-20 backdrop-blur-lg bg-gradient-to-br from-slate-800 to-slate-900">
+  <div class="hero min-h-screen bg-opacity-20 backdrop-blur-lg bg-gradient-to-br from-blue-500 to-purple-600">
     <div class="hero-content flex-col lg:flex-row">
       <div class="text-center lg:text-left">
-        <h1 class="mb-5 text-5xl font-bold">Hello World</h1>
-        <p class="mb-5">Welcome to our modern landing page!</p>
+        <h1 class="text-5xl font-bold">Hello World</h1>
+        <p class="py-6">Welcome to our modern landing page.</p>
         <div class="badge badge-info">Status: Active</div>
       </div>
       <div class="card w-96 bg-base-100 shadow-xl">
         <div class="card-body">
           <h2 class="card-title">Action Button</h2>
-          <p id="actionText" class="hidden">This text will toggle.</p>
+          <p>Click the button to toggle the text container.</p>
           <button id="toggleButton" class="btn btn-primary">Toggle Text</button>
+          <div id="textContainer" class="mt-4 hidden">
+            <p>This is some hidden text that can be toggled.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <script>
     document.getElementById('toggleButton').addEventListener('click', function() {
-      var text = document.getElementById('actionText');
-      if (text.classList.contains('hidden')) {
-        text.classList.remove('hidden');
+      var textContainer = document.getElementById('textContainer');
+      if (textContainer.classList.contains('hidden')) {
+        textContainer.classList.remove('hidden');
       } else {
-        text.classList.add('hidden');
+        textContainer.classList.add('hidden');
       }
     });
   </script>
