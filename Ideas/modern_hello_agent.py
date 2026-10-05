@@ -132,7 +132,7 @@ if __name__ == "__main__":
     
     # 1. Generate HTML body dynamically using Ollama
     generation_prompt = (
-        "Create a sleek dark-mode glassmorphism hero section for a modern Hello World landing page. "
+        "Create a sleek very dark-mode glassmorphism hero section for a modern Hello World landing page. center the text. "
         "Include a status badge, interactive action button that toggles visibility on a text container, "
         "and clean responsive padding."
     )
