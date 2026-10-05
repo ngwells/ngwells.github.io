@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Modern Landing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="hero min-h-screen bg-opacity-20 backdrop-blur-lg bg-gradient-to-br from-slate-800 to-slate-900">
+    <div class="hero-content flex-col lg:flex-row">
+      <div class="text-center lg:text-left">
+        <h1 class="mb-5 text-5xl font-bold">Hello World</h1>
+        <p class="mb-5">Welcome to our modern landing page!</p>
+        <div class="badge badge-info">Status: Active</div>
+      </div>
+      <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title">Action Button</h2>
+          <p id="actionText" class="hidden">This text will toggle.</p>
+          <button id="toggleButton" class="btn btn-primary">Toggle Text</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+      var text = document.getElementById('actionText');
+      if (text.classList.contains('hidden')) {
+        text.classList.remove('hidden');
+      } else {
+        text.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
