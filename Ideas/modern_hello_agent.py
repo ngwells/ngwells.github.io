@@ -95,10 +95,20 @@ def write_commit_and_push_files(html_body: str, output_dir: str, repo_root: str)
         else:
             print(f"[✓] Git Commit Output:\n{commit_res.stdout.strip()}")
 
-        # Push directly to GitHub
-        print("🚀 Pushing commit to GitHub (origin main)...")
+        # Dynamically detect active branch (master vs main)
+        branch_res = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            cwd=repo_root,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        active_branch = branch_res.stdout.strip() or "master"
+
+        # Push directly to GitHub using active branch
+        print(f"🚀 Pushing commit to GitHub (origin {active_branch})...")
         push_res = subprocess.run(
-            ["git", "push", "origin", "main"],
+            ["git", "push", "origin", active_branch],
             cwd=repo_root,
             capture_output=True,
             text=True,
@@ -107,7 +117,7 @@ def write_commit_and_push_files(html_body: str, output_dir: str, repo_root: str)
         
         stdout_msg = push_res.stdout.strip()
         stderr_msg = push_res.stderr.strip()
-        print(f"[✓] Git Push Output:\n{stderr_msg if stderr_msg else stdout_msg if stdout_msg else 'Successfully pushed to main.'}")
+        print(f"[✓] Git Push Output:\n{stderr_msg if stderr_msg else stdout_msg if stdout_msg else f'Successfully pushed to {active_branch}.'}")
 
     except subprocess.CalledProcessError as e:
         print(f"\n[X] Git Command Failed: {' '.join(e.cmd)}")
