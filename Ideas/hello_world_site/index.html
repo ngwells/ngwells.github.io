@@ -18,32 +18,21 @@
     </script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
-<body class="bg-gray-900 text-white font-mono">
-  <div class="flex items-center justify-center min-h-screen">
-    <div class="bg-[#1e1e1e] backdrop-blur-lg rounded-lg p-10 shadow-lg shadow-[#000000]/50">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold">Hello World</h1>
-        <p class="mt-4">Welcome to our modern landing page!</p>
-        <div class="mt-6">
-          <span class="bg-green-500 text-white px-4 py-2 rounded-full">Active</span>
-        </div>
-        <button id="toggleButton" class="mt-8 bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600">
-          Toggle Text
-        </button>
-        <div id="textContainer" class="mt-8 hidden">
-          <p>This is some additional text that can be toggled.</p>
-        </div>
+<body class="bg-gray-900 text-white font-sans flex items-center justify-center min-h-screen">
+  <div class="glassmorphism p-10 rounded-lg shadow-lg backdrop-blur-lg">
+    <div class="text-center">
+      <span class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full mb-4">Hello World</span>
+      <button id="toggleButton" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-300">Toggle Text</button>
+      <div id="textContainer" class="mt-4 hidden">
+        <p class="mt-2">Welcome to our modern landing page!</p>
       </div>
     </div>
   </div>
+
   <script>
     document.getElementById('toggleButton').addEventListener('click', function() {
       var textContainer = document.getElementById('textContainer');
-      if (textContainer.classList.contains('hidden')) {
-        textContainer.classList.remove('hidden');
-      } else {
-        textContainer.classList.add('hidden');
-      }
+      textContainer.classList.toggle('hidden');
     });
   </script>
 </body>
